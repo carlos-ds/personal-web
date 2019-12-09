@@ -1,0 +1,19 @@
+{
+  "name": "eleventy-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve --input=. --output=_site",
+    "watch": "npx eleventy --watch",
+    "debug": "DEBUG=* npx eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0"
+  }
+}
