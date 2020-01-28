@@ -108,8 +108,12 @@ a {
   margin-bottom: 1rem;
 }
 
-.about-item:nth-of-type(2) {
+.about-item:nth-of-type(even) {
   background-color: #ffe680;
+}
+
+.social-icon {
+  height: 1em;
 }
 
 /* Blog */
