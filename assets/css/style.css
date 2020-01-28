@@ -36,9 +36,14 @@ h1 {
   font-size: 3rem;
   font-weight: 200;
 }
+
 h2 {
   text-transform: uppercase;
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
 }
 
 a {
@@ -106,6 +111,24 @@ a {
 .about-item:nth-of-type(2) {
   background-color: #ffe680;
 }
+
+/* Blog */
+#listing {
+  padding: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+article {
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+}
+
+h3.blog-title a {
+  color: black;
+  font-weight: 300;
+}
+
 
 @media (max-width: 800px) {
   .flex-grid {

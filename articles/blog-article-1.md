@@ -1,6 +1,7 @@
 ---
 layout: layouts/article-layout.njk
-title: This Is My First Ever Post
+title: First post
+url: first-ever-post
 date: 2019-05-30
 tags: ["article"]
 ---

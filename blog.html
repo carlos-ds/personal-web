@@ -1,0 +1,19 @@
+---
+layout: layouts/base-layout.njk
+title: Blog
+pagination:
+  data: collections.article
+  size: 10
+  reverse: true
+  alias: articles
+---
+<div id="listing">
+  {% for article in articles %}
+    <article>
+      <h3 class="blog-title">
+        <a href="{{ article.url | url }}">{{ article.data.title }}</a>
+      </h3>
+      {{ article.date }}
+    </article>
+  {% endfor %}
+</div>
