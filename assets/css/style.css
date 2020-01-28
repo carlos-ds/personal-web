@@ -51,6 +51,13 @@ a {
   text-decoration: underline;
 }
 
+a.inactive {
+  color: var(--secondary-color);
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+}
+
 /* Homepage - Menu */
 #menu {
   text-align: center;

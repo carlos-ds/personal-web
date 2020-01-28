@@ -1,14 +1,13 @@
 <section id="menu">
     <ul>
         <li>
-            <a href="/">Home</a>
+            <a {% if home %}class="inactive"{% endif %} href="/">Home</a>
         </li>
         <li>
-            <a href="/blog/index.html">Blog</a>
+            <a {% if blog %}class="inactive"{% endif %} href="/blog/index.html">Blog</a>
         </li>
         <li>
-            <a href="/about.html">About</a>
-        </li>
-        
+            <a {% if about %}class="inactive"{% endif %}href="/about.html">About</a>
+        </li>   
     </ul>
 </section>
