@@ -79,6 +79,7 @@ a.inactive {
 }
 
 #menu li a {
+  font-size: 2rem;
   color: var(--tertiary-color);
   text-transform: uppercase;
   letter-spacing: 0.25rem;
@@ -119,6 +120,11 @@ a.inactive {
   background-color: #ffe680;
 }
 
+#social ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 .social-icon {
   height: 1em;
 }
@@ -142,8 +148,18 @@ h3.blog-title a {
 
 
 @media (max-width: 800px) {
-  .flex-grid {
-    display: block;
+  /* Homepage - Menu */
+  #menu ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #menu li {
+    padding: 1rem 0;
+    border: none;
   }
 
   #about {
