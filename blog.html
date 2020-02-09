@@ -8,14 +8,16 @@ pagination:
   reverse: true
   alias: articles
 ---
+<!-- New design inspiration: http://wpdemo.magikthemes.com/fluence/ -->
 <div id="listing">
   {% for article in articles %}
     <article>
       <h3 class="blog-title">
-        <a href="{{ article.url | url }}">{{ article.data.title }}</a>
+        <a href="{{ article.url | url }}">{{ article.data.title }}</a><span class="article-date"> - {{ article.data.articleDate }}</span>
       </h3>
-      <p>{{ article.data.preview }}</p>
-      <a href="{{ article.url | url }}">Read more</a>
+      <p class="preview">{{ article.data.preview }}</p>
+      <button href="{{ article.url | url }}" class="btn-primary">Read more</a>
     </article>
+    <hr>
   {% endfor %}
 </div>
