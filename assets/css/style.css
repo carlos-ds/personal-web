@@ -134,7 +134,7 @@ a.inactive {
   text-align: center;
 }
 
-article {
+#listing article {
   padding: 3rem;
 }
 
@@ -211,8 +211,14 @@ h3.blog-title a:hover {
     padding: 0;
   }
 
+  /* About */
   #about {
     width: 100%;
+  }
+
+  /* Blog */
+  #listing article {
+    padding: 3rem 0;
   }
 
   .main {
