@@ -192,7 +192,7 @@ h3.blog-title a:hover {
 }
 
 @media (max-width: 800px) {
-  /* Homepage - Menu */
+  /* Menu */
   #menu ul {
     padding: 0;
     list-style-type: none;
@@ -204,6 +204,11 @@ h3.blog-title a:hover {
   #menu li {
     padding: 1rem 0;
     border: none;
+  }
+
+  /* Homepage */
+  #intro {
+    padding: 0;
   }
 
   #about {
