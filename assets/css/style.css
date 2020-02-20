@@ -44,6 +44,7 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
+  margin: 1rem 0;
 }
 
 a {
@@ -170,6 +171,7 @@ h3.blog-title a:hover {
   appearance: button;
   background: white;
   color: var(--secondary-color);
+  margin-bottom: 1rem;
 }
 
 .btn-primary:hover {
@@ -219,6 +221,10 @@ h3.blog-title a:hover {
   /* Blog */
   #listing article {
     padding: 3rem 0;
+  }
+
+  .article-date {
+    display: block;
   }
 
   .main {
