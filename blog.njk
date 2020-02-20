@@ -10,13 +10,13 @@ pagination:
 ---
 <div id="listing">
   {% for article in articles %}
-    <article>
+    <section>
       <h3 class="blog-title">
         <a href="{{ article.url | url }}">{{ article.data.title }}</a><span class="article-date"> - {{ article.data.date | date }}</span>
       </h3>
       <p class="preview">{{ article.data.preview }}</p>
       <a href="{{ article.url | url }}" class="btn-primary">Read more</a>
-    </article>
+    </section>
     <hr>
   {% endfor %}
 </div>

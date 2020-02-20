@@ -137,7 +137,7 @@ a.inactive {
   text-align: center;
 }
 
-#listing article {
+#listing section {
   padding: 3rem;
 }
 
@@ -191,8 +191,13 @@ h3.blog-title a:hover {
 }
 
 /* Blog Article */
-.main {
+#blog-post {
   width: 70%;
+  padding: 2rem;
+}
+
+#blog-post img {
+  width: 400px;
 }
 
 @media (max-width: 800px) {
@@ -210,22 +215,26 @@ h3.blog-title a:hover {
     border: none;
   }
 
-  /* Homepage */
-  #intro {
-    padding: 0;
-  }
-
   /* About */
   #about {
     width: 100%;
   }
 
   /* Blog */
-  #listing article {
+  #listing section {
     padding: 3rem 1rem;
   }
 
   .article-date {
     display: block;
+  }
+
+  #blog-post img {
+    width: 100%;
+  }
+
+  #blog-post {
+    width: auto;
+    padding: 2rem;
   }
 }

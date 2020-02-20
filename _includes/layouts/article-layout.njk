@@ -5,8 +5,8 @@ permalink: "/blog/{{ url }}.html"
 {% include "./partials/header.njk" %}
 {% include "./partials/menu.njk" %}
 
-	<section class="main">
+	<article id="blog-post">
 		{{ content | safe }}
-	</section>
+	</article>
 
 {% include "./partials/footer.njk" %}
