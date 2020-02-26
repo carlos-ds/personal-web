@@ -1,0 +1,10 @@
+---
+pagination:
+  data: books
+  size: 10
+permalink: books.html
+---
+<p>test</p>
+{% for book in books %}
+<p>{{ book.title }}</p>
+{% endfor %}
