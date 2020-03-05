@@ -192,6 +192,7 @@ h3.blog-title a:hover {
 
 /* Blog Article */
 #blog-post {
+  margin: 0 auto;
   width: 40%;
   padding: 2rem;
 }
