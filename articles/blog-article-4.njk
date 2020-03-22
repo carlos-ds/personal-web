@@ -1,0 +1,109 @@
+---
+layout: layouts/article-layout.njk
+title: "Test automation with Selenium"
+url: test-automation-selenium
+date: 2020-03-22
+tags: ["article"]
+preview: "A basic IDE and code example."
+---
+<h1>{{ title }}</h1>
+<p>Recently, I've been looking into test automation and bumped into the Selenium IDE extensions for <a href="https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd" target="_blank">Chrome</a> and <a href="https://addons.mozilla.org/nl/firefox/addon/selenium-ide/" target="_blank">Firefox</a>. And I have to say: I never figured it was <strong>that</strong> easy.</p> 
+<p>Since then, I've been playing around with it and am looking for limitations. Because if it looks too good to be true, it usually is. Let's check that out.</p>
+<p>After downloading the extension for Chrome or Firefox, you can fire up the IDE by clicking on the extension icon. This will open the IDE in a separate window and it will ask you if you want to create a new project or open an existing one. It also refers you to the <a href="https://www.selenium.dev/selenium-ide/" target="_blank">Selenium IDE project page</a> for more info.</p>
+<p><a href="/assets/img/selenium-ide-screen1.png" target="_blank"><img src="/assets/img/selenium-ide-screen1.png" alt="Selenium IDE in Chrome - opening screen" width="100%"/></a></p>
+<p>Open a new project and give it an appropriate name. Now, we're presented with a blank slate.</p>
+<p>On the left-hand side, you have an overview of all the tests in your project. There should be one named <i>Untitled</i>. On the right, you have an overview of all the commands for that test. And at the bottom, there is a log section which will display the test results.</p>
+<p><a href="/assets/img/selenium-ide-home.png" target="_blank"><img src="/assets/img/selenium-ide-home.png" alt="Selenium IDE in Chrome - home screen" width="100%" /></a></p>
+<p>To summarize the data model of the Selenium IDE:</p>
+<ul>
+<li>Every <i>project</i> consists of one or more <i>tests</i>.</li>
+<li>Every <i>test</i> consists of one or more <i>commands</i>.</li>
+<li>Every <i>command</i> can have a <i>target</i> and/or a <i>value</i>.</li>
+</ul>
+<h3>An example: Testing Hackernoon's newsletter sign-up</h3>
+<p>We'll start off with an example using Google Chrome. In the input field "Playback base URL" we'll put https://hackernoon.com/tagged/coding. If you head over to their site, you'll see they have a <i>Subscribe</i> button in their navigation which leads to the newsletter subscription form on the homepage via an anchor. The form looks like this:</p>
+<p><a href="/assets/img/hackernoon-newsletter.png" target="_blank"><img src="/assets/img/hackernoon-newsletter.png" alt="Selenium IDE in Chrome - home screen" width="100%" /></a></p>
+<p>And the HTML that goes along with it:</p>
+<pre class="prettyprint">
+&lt;form action="https://hackernoon.us19.list-manage.com/subscribe/post?u=b48b0ec2173fecf2586c00e80&amp;id=fa796741e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate"&gt;
+    &lt;div class="subscribe-header"&gt;
+    &lt;h2&gt;Hackernoon Newsletter curates great stories by real tech professionals&lt;/h2&gt;
+        &lt;p&gt;Get solid gold sent to your inbox. Every week!&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="mc-field-group"&gt;
+        &lt;input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address *" aria-required="true"&gt;
+    &lt;/div&gt;
+    &lt;div class="fields-group"&gt;
+        &lt;div class="mc-field-group"&gt;
+        &lt;input type="text" value="" name="MMERGE1" class="" id="mce-MMERGE1" placeholder="First Name"&gt;
+        &lt;/div&gt;
+        &lt;div class="mc-field-group"&gt;
+        &lt;input type="text" value="" name="MMERGE2" class="" id="mce-MMERGE2" placeholder="Last Name"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="mc-field-group input-group topics-list"&gt;
+        &lt;strong&gt;Topics of interest &lt;/strong&gt;
+        &lt;ul&gt;
+        &lt;li class="checkbox"&gt;
+            &lt;input checked="" type="checkbox" value="1" name="group[3757][1]" id="mce-group[3757]-3757-0"&gt;
+            &lt;label for="mce-group[3757]-3757-0"&gt;Software Development&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li class="checkbox"&gt;
+            &lt;input checked="" type="checkbox" value="2" name="group[3757][2]" id="mce-group[3757]-3757-1"&gt;
+            &lt;label for="mce-group[3757]-3757-1"&gt;Blockchain Crypto&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li class="checkbox"&gt;
+            &lt;input checked="" type="checkbox" value="4" name="group[3757][4]" id="mce-group[3757]-3757-2"&gt;
+            &lt;label for="mce-group[3757]-3757-2"&gt;General Tech&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li class="checkbox"&gt;
+            &lt;input checked="" type="checkbox" value="8" name="group[3757][8]" id="mce-group[3757]-3757-3"&gt;
+            &lt;label for="mce-group[3757]-3757-3"&gt;Best of Hacker Noon&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id="mce-responses" class="clear"&gt;
+        &lt;div class="response" id="mce-error-response" style="display:none"&gt;&lt;/div&gt;
+        &lt;div class="response" id="mce-success-response" style="display:none"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style="position: absolute; left: -5000px;" aria-hidden="true"&gt;
+        &lt;input type="text" name="b_b48b0ec2173fecf2586c00e80_fa796741e6" tabindex="-1" value=""&gt;
+    &lt;/div&gt;
+    &lt;div class="submit-btn"&gt;
+        &lt;input type="submit" value="Get great stories by email" name="subscribe" id="mc-embedded-subscribe" class="button"&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+<p>So what do we need to test to assure that the form works?</p>
+<ul>
+<li>Open a page on Hackernoon e.g. https://hackernoon.com/tagged/coding</li>
+<li>Click <i>Subscribe</i></li>
+<li>Fill in a valid e-mail address, first name and last name</li>
+<li>Click <i>Get great stories by email</i>.</li>
+<li>Leave the checkboxes untouched (for this example).</li>
+<li>Assert that the div with id <i>mce-success-response</i> is not empty.</li>
+</ul>
+<p>This is what we'll usually refer to as the <strong>happy flow</strong>, although Wikipedia seems to prefer <a href="https://en.wikipedia.org/wiki/Happy_path" target="blank">happy path</a>. No fuss, the user goes straight through without any issues.</p>
+<p>Now, there are two ways to handle this:</p>
+<ol>
+<li>Click on <i>Start recording</i> in Selenium IDE. Google Chrome will automatically open a new window and you can record the steps outlined above. When you've clicked on <i>Get great stories by email</i>, you can switch back to the Selenium IDE and click on <i>Stop recording</i>. If you haven't already done so, you will be prompted to enter a name for your test.</li>
+<li style="margin-top: 1rem;">Type in all the commands by yourself. This will take some more time but it's a good way to actually understand what's happening and how to transform that into code which Selenium can understand. We'll skip that for now.</li>
+</ol>
+<p>The commands will look like this:</p>
+<p><a href="/assets/img/selenium-ide-commands-example.png" target="_blank"><img src="/assets/img/selenium-ide-commands-example.png" alt="Selenium IDE commands example" width="100%" /></a></p>
+<p>The only thing left for this example is to add our assertion to this commands list:</p>
+<ul>
+<li>Command: <i>assert not text</i></li>
+<li>Target: <i>id=mce-success-response</i></li>
+<li>Value: <i>""</i></li>
+</ul>
+<p>And to add a final command <i>close</i> to close the browser at the end of the test.</p>
+<p>We end up with this as a final commands list for the first test:</p>
+
+<p>Run the test using CTRL + R or by clicking on the icon. You should see a detailed log at the bottom of the IDE and lots of green!</p>
+<p><a href="/assets/img/selenium-ide-commands-final.png" target="_blank"><img src="/assets/img/selenium-ide-commands-final.png" alt="Selenium IDE commands final" width="100%" /></a></p>
+<p>You can switch back to the test editor by clicking on the dropdown in the top left displaying <i>Executing</i>.</p>
+<p>There's also a section <i>Test Suites</i> in there which we're not going to cover. Basically, that's a collection of tests that you can run in parallel or you could also persist sessions (which can avoid having to log in per test for example).</p>
+<p>And that concludes our happy flow. I'll leave it up to you to figure out how to test the unhappy flow e.g. a user enters an invalid e-mail address. In that case we'd expect the form to return an error message.</p>
+<p>Happy testing!</p>
+<script src="/assets/js/run_prettify.js"></script>

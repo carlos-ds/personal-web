@@ -5,6 +5,7 @@
 :root {
   --body-font: "EB Garamond", serif;
   --header-font: "Oswald", sans-serif;
+  --code-font: "Consolas", monospace, monospace;
   --text-color: #111111;
   --secondary-color: #2358d1;
   --tertiary-color: #ffe680;
@@ -58,6 +59,19 @@ a.inactive {
   text-decoration: none;
   pointer-events: none;
   cursor: default;
+}
+
+pre,
+code {
+  font-family: monospace, monospace;
+}
+pre {
+  overflow: auto;
+}
+pre > code {
+  display: block;
+  padding: 1rem;
+  word-wrap: normal;
 }
 
 /* Homepage - Menu */
@@ -195,10 +209,6 @@ h3.blog-title a:hover {
   margin: 0 auto;
   width: 40%;
   padding: 2rem;
-}
-
-#blog-post img {
-  width: 400px;
 }
 
 @media (max-width: 800px) {
