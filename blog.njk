@@ -12,7 +12,7 @@ pagination:
   {% for article in articles %}
     <section>
       <h3 class="blog-title">
-        <a href="{{ article.url | url }}">{{ article.data.title }}</a><span class="article-date"> - {{ article.data.date | date }}</span>
+        <a href="{{ article.url | url }}">{{ article.data.title }}</a><span class="article-date"> - {{ article.date | date }}</span>
       </h3>
       <p class="preview">{{ article.data.preview }}</p>
       <a href="{{ article.url | url }}" class="btn-primary">Read more</a>
