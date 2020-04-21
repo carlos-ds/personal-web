@@ -1,12 +1,29 @@
----
-permalink: "/blog/{{ url }}.html"
----
-
 {% include "./partials/header.njk" %}
 {% include "./partials/menu.njk" %}
 
-	<article id="blog-post">
-		{{ content | safe }}
-	</article>
+	<div id="blog-container">
+		<article id="blog-text">
+			
+			{{ content | safe }}
+			
+		</article>
+		<div id="related-articles">
+			<p><strong>Some other articles you might like:</strong></p>
+			<ul>
+				{%- for article in collections.article -%}
+					{% if (article.url == page.url) %}
+						{#  Above if statement is combined with blank next line to not show current page as a related article #}
+					{% else %}
+						<li><a href="{{ article.url }}">{{ article.data.title }}</a></li>
+					{% endif %}
+				{%- endfor -%}
+			</ul>
+		</div>
+		<p><a class="medium button" href="/blog">&LeftArrowBar; Return to blog overview</a></p>
+		
+
+		
+	</div>
+	
 
 {% include "./partials/footer.njk" %}
