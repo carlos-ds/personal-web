@@ -1,13 +1,16 @@
 <section id="menu">
     <ul>
         <li>
-            <a {% if home %}class="inactive"{% endif %} href="/">Home</a>
+            <a {% if (page.url == '/') %}class="inactive"{% endif %} href="/">Home</a>
         </li>
         <li>
-            <a {% if blog %}class="inactive"{% endif %} href="/blog/index.html">Blog</a>
+            <a {% if (page.url == '/blog/') %}class="inactive"{% endif %} href="/blog/">Blog</a>
         </li>
         <li>
-            <a {% if about %}class="inactive"{% endif %}href="/about.html">About</a>
-        </li>   
+            <a {% if (page.url == '/about/') %}class="inactive"{% endif %}href="/about/">About</a>
+        </li>
+        <li>
+            <a {% if (page.url == '/uses/') %}class="inactive"{% endif %}href="/uses/">Uses</a>
+        </li>      
     </ul>
 </section>
