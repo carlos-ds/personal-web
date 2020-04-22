@@ -54,7 +54,7 @@ h3 {
 
 a {
   color: var(--text-color);
-  border-bottom: 2px solid rgb(200, 200, 200);
+  border-bottom: 2px solid rgb(160, 160, 160);
   text-decoration: none;
 }
 
@@ -68,6 +68,7 @@ a.inactive {
 
 a:hover {
   border-bottom: 2px solid var(--secondary-color);
+  opacity: 0.7;
   transition: opacity 0.5s ease;
 }
 
