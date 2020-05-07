@@ -290,4 +290,8 @@ h3.blog-title a {
     width: auto;
     padding: 2rem;
   }
+
+  #blog-container {
+    width: 90%;
+  }
 }
