@@ -14,7 +14,7 @@
 /* General styling! */
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 0 5rem 0;
 }
 
 p,
@@ -233,6 +233,19 @@ h3.blog-title a {
 
 #listing hr:last-of-type {
   display: none;
+}
+
+#pagination {
+  margin: 0 auto;
+  width: 90%;
+}
+
+#pagination ul li {
+  display: inline-block;
+}
+
+#pagination ul li:nth-of-type(2) {
+  padding-left: 2rem;
 }
 
 /* Blog Article */

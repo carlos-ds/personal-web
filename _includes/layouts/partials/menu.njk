@@ -4,7 +4,8 @@
             <a {% if (page.url == '/') %}class="inactive"{% endif %} href="/">Home</a>
         </li>
         <li>
-            <a {% if (page.url == '/blog/') %}class="inactive"{% endif %} href="/blog/">Blog</a>
+            {% set regExp = r/^\/blog.*/g %}
+            <a {% if regExp.test(page.url) %}class="inactive"{% endif %} href="/blog/page-1/">Blog</a>
         </li>
         <li>
             <a {% if (page.url == '/about/') %}class="inactive"{% endif %}href="/about/">About</a>

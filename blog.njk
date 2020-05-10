@@ -3,12 +3,14 @@ layout: layouts/base-layout.njk
 title: Blog
 pagination:
   data: collections.article
-  size: 10
+  size: 3
   reverse: true
   alias: articles
+permalink: "/blog/page-{{ pagination.pageNumber + 1 }}/index.html"
+slug: "/blog/"
 ---
 <div id="listing">
-  {% for article in articles %}
+  {% for article in pagination.items %}
     <section>
       <h3 class="blog-title">
         <a href="{{ article.url | url }}">{{ article.data.title }}</a><span class="article-date"> - {{ article.date | date }}</span>
@@ -18,4 +20,12 @@ pagination:
     </section>
     <hr>
   {% endfor %}
+  <nav id="pagination">
+  <ul>
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous page</a>{% else %}Previous page{% endif %}</li>
+    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next page</a>{% else %}Next page{% endif %}</li>
+  <ul>
+  </nav>
 </div>
+
+
