@@ -47,7 +47,8 @@ BigInt("3214282912345698765432161182") % BigInt(97)
 BigInt("3214282912345698765432161182") % 97
 // Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
 </pre>
-<p>The main problem ofcourse is that you don't see the issues coming for (too) large numbers. Because when you perform this modulus operation without coercing to BigInt, you'll get a result that doesn't spell disaster. It puts us on the wrong foot completely:</p>
+<p>The main problem ofcourse is that you don't see the issues coming for (too) large numbers. Because when you perform this modulus operation without coercing to BigInt, you'll get a result that doesn't spell disaster.</p>
+<p>Instead, it puts us on the wrong foot:</p>
 <pre class="prettyprint">
 3214282912345698765432161182 % 97
 // 65
