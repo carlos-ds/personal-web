@@ -1,0 +1,57 @@
+---
+layout: layouts/article-layout.njk
+title: "Why BigInt is a big deal"
+date: 2020-05-16
+tags: ["article"]
+preview: "Two situations I've encountered in my daily life made me realize this."
+meta-description: "BigInt was officially added to ECMA2021, and there are lots of reasons why that's a good thing."
+---
+<h1>{{ title }}</h1>
+<p>I'm gonna be honest: it's not easy keeping up-to-date with when exactly changes to the Javascript language will be made. Wanna grasp it all? Go dig into meeting notes, drafts, specification documents, browser versions ... You get the gist.</p>
+<p>The fact is that on a yearly basis, we're treated to new stuff in Javascript. And when I heard on a podcast that <strong>BigInt</strong> would finally make the <strong>official release</strong> (even though it has already been implemented for a while <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt">by most browsers</a>), my mind began to wander off. It brought me back to early 2019, when I had encountered the need for BigInt in frantic fashion.</p>
+<h2>Why don't these numbers add up?</h2>
+<p>In 2019, I was working for a financial company and we displayed financial information (revenues, cost, forecasts ...) of clients to potential investors. Most of that information came from small businesses, but apparently not small enough</p>
+<p>I remember getting a call from one of my colleagues: "Hi Karel, I'm getting some info from a client that the numbers he has uploaded to our site don't seem to be displayed correctly. Could you have a look?"</p>
+<p>So I dove in and indeed, the numbers that were uploaded by the client didn't add up. There were numbers for several years that were uploaded, and the numbers for those latest years didn't match the data that was uploaded. We reproduced the problem on our test environments and figured there was a problem when column sizes exceeded a specific number.</p>
+<p>But numerous tests later, we realized the problem lay with the numbers itself. They seemed to be cut off to <strong>21.474</strong>. The developer knew it now: the problem was in the data type. And sure, we found that the <a href="https://docs.oracle.com/cd/E17952_01/mysql-5.0-en/integer-types.html" target="_blank">max value for INT in MySQL</a> is 2147483647.</p>
+<p>Since we always included 2 decimal points, the maximum value we could store was 21.474.836,47. And when divided by 1.000 and displaying it without decimal points, that came down to <strong>21.474</strong>. Mystery solved!</p>
+<h2>But what about Javascript?</h2>
+<p>Well, in Javascript things were similarly problematic. Although, because the Javascript number is stored as a <strong>64-bit floating point number</strong> instead of a 32-bit number, the safe value is significantly larger than INT in MySQL or <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2" target="_blank">int in Java</a>.</p>
+<p>And just like in Java, you can easily access that maximum or minimum value:</p>
+<pre class="prettyprint">
+Number.MAX_SAFE_INTEGER
+// 9007199254740991
+
+Number.MIN_SAFE_INTEGER
+// -9007199254740991
+</pre>
+<p>Now, it seems difficult to spot problems with a value this high. But I was forced to think again.</p>
+<h2>Arithmetic for bank accounts</h2>
+<p>When building <a href="https://iban-node.herokuapp.com/" target="_blank">my IBAN generator/validator</a>, I wrote some tests in Jest and after running them a couple of times, I decided things were good to go. But when I returned to the application, strange things were happening.</p>
+<p>That's because validating or generating an IBAN number requires mathematical operations with large numbers. Looking at the <a href="https://en.wikipedia.org/wiki/International_Bank_Account_Number#Algorithms" target="_blank">example on Wikipedia</a>, we need to perform a modulus operation on 3214282912345698765432161182, which is larger than <code>Number.MAX_SAFE_INTEGER</code>.
+<pre class="prettyprint">
+3214282912345698765432161182 > Number.MAX_SAFE_INTEGER
+// true
+</pre>
+<p>The question is now: how can we safely proceed? Well, you can <strong>coerce a Number to a BigInt</strong> by adding "n" to the end of a number or by calling the BigInt constructor with a string that contains the integer value. Which leads to the following operations for our example number.</p>
+
+<pre class="prettyprint">
+3214282912345698765432161182n % 97n
+// 1n
+
+BigInt("3214282912345698765432161182") % BigInt(97)
+// 1n
+</pre>
+<p>Notice how you also can't perform these mathematical operations if both numbers aren't coerced to the same type (BigInt or Number).</p>
+<pre class="prettyprint">
+BigInt("3214282912345698765432161182") % 97
+// Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+</pre>
+<p>The main problem ofcourse is that you don't see the issues coming for (too) large numbers. Because when you perform this modulus operation without coercing to BigInt, you'll get a result that doesn't spell disaster. It puts us on the wrong foot completely:</p>
+<pre class="prettyprint">
+3214282912345698765432161182 % 97
+// 65
+</pre>
+<p>It took me a while to figure it out so I got burned twice by the same flame. But that doesn't matter, I learned from it and next time, I'll see it coming even faster.</p>
+
+<script src="/assets/js/run_prettify.js"></script>

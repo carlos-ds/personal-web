@@ -75,9 +75,11 @@ a:hover {
 pre,
 code {
   font-family: monospace, monospace;
+  font-size: 1.25rem;
 }
 pre {
   overflow: auto;
+  margin-bottom: 3rem;
 }
 pre > code {
   display: block;
