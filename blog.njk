@@ -12,8 +12,8 @@ slug: "/blog/"
 <div id="listing">
   {% for article in pagination.items %}
     <section>
-      <h3 class="blog-title">
-        <a href="{{ article.url | url }}">{{ article.data.title }}</a><span class="article-date"> - {{ article.date | date }}</span>
+      <h3>
+        <a class="blog-title" href="{{ article.url | url }}">{{ article.data.title }}</a><span class="article-date"> - {{ article.date | date }}</span>
       </h3>
       <p class="preview">{{ article.data.preview }}</p>
       <a href="{{ article.url | url }}" class="btn-primary">Read more</a>

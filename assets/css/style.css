@@ -193,11 +193,11 @@ pre > code {
   padding: 3rem;
 }
 
-h3.blog-title a {
-  color: black;
+a.blog-title {
+  color: var(--text-color);
   font-weight: 300;
   text-transform: uppercase;
-  text-decoration: none;
+  border-bottom: none;
 }
 
 .article-date {
@@ -253,7 +253,7 @@ h3.blog-title a {
 /* Blog Article */
 #blog-container {
   margin: 0 auto;
-  width: 40%;
+  width: 50%;
   padding: 2rem;
 }
 
