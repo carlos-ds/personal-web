@@ -15,7 +15,6 @@
 body {
   margin: 0;
   padding: 0 0 5rem 0;
-  text-align: left;
 }
 
 p,
@@ -116,8 +115,8 @@ pre > code {
 
 /* Nav */
 #menu {
-  text-align: center;
-  margin: 0 auto;
+  text-align: left;
+  padding: 2rem 0;
 }
 
 #menu ul {
@@ -126,7 +125,7 @@ pre > code {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 #menu li {
@@ -153,19 +152,17 @@ pre > code {
 /* Homepage - Main */
 main {
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
   padding-bottom: 3rem;
-  text-align: center;
 }
 
 section {
-  padding: 2rem;
+  padding: 3rem 2rem;
   text-align: left;
 }
 
-/* Homepage - Intro */
-#intro {
-  text-align: center;
+#intro img {
+  margin-top: 1.75rem;
 }
 
 /* About */
@@ -184,11 +181,11 @@ section:nth-of-type(even) {
 
 /* Blog Overview */
 #listing {
-  text-align: center;
+  text-align: left;
 }
 
 #listing article {
-  padding: 3rem;
+  padding: 3rem 2rem;
 }
 
 a.blog-title {
@@ -229,6 +226,7 @@ a.blog-title {
 }
 
 #listing hr {
+  margin-left: 2rem;
   width: 50%;
 }
 
@@ -237,8 +235,12 @@ a.blog-title {
 }
 
 #pagination {
-  margin: 0 auto;
+  margin: 5rem 2rem;
   width: 90%;
+}
+
+#pagination ul {
+  padding: 0;
 }
 
 #pagination ul li {
@@ -251,7 +253,6 @@ a.blog-title {
 
 /* Blog Article */
 #blog-container {
-  margin: 0 auto;
   width: 50%;
   padding: 2rem;
 }
@@ -268,9 +269,9 @@ a.blog-title {
 }
 
 @media (max-width: 800px) {
-  /* Menu */
   #menu ul {
-    padding: 0;
+    padding-left: 2rem;
+    text-align: left;
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -282,14 +283,8 @@ a.blog-title {
     border: none;
   }
 
-  /* About */
   main {
     width: 100%;
-  }
-
-  /* Blog */
-  #listing article {
-    padding: 3rem 1rem;
   }
 
   .article-date {
