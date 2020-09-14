@@ -28,7 +28,7 @@ Number.MIN_SAFE_INTEGER
 <p>Now, it seems difficult to spot problems with a value this high. But I was forced to think again.</p>
 <h2>Arithmetic for bank accounts</h2>
 <p>When building <a href="https://iban-node.herokuapp.com/" target="_blank">my IBAN generator/validator</a>, I wrote some tests in Jest and after running them a couple of times, I decided things were good to go. But when I returned to the application, strange things were happening.</p>
-<p>That's because validating or generating an IBAN number requires mathematical operations with large numbers. Looking at the <a href="https://en.wikipedia.org/wiki/International_Bank_Account_Number#Algorithms" target="_blank">example on Wikipedia</a>, we need to perform a modulus operation on 3214282912345698765432161182, which is larger than <code>Number.MAX_SAFE_INTEGER</code>.
+<p>That's because validating or generating an IBAN number requires mathematical operations with large numbers. Looking at the <a href="https://en.wikipedia.org/wiki/International_Bank_Account_Number#Algorithms" target="_blank">example on Wikipedia</a>, we need to perform a modulus operation on 3214282912345698765432161182, which is larger than the maximum value for a number in Javascript.
 <pre class="prettyprint">
 3214282912345698765432161182 > Number.MAX_SAFE_INTEGER
 // true
