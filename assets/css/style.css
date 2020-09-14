@@ -13,8 +13,7 @@
 
 /* General styling! */
 body {
-  margin: 0;
-  padding: 0 0 5rem 0;
+  margin: 0 0 8rem 0;
 }
 
 p,
@@ -73,21 +72,6 @@ a:hover {
   opacity: 0.7;
   transition: opacity 0.5s ease;
   cursor: pointer;
-}
-
-pre,
-code {
-  font-family: monospace, monospace;
-  font-size: 1.5rem;
-}
-pre {
-  overflow: auto;
-  margin-bottom: 3rem;
-}
-pre > code {
-  display: block;
-  padding: 1rem;
-  word-wrap: normal;
 }
 
 .small {
