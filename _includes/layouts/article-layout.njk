@@ -12,7 +12,7 @@
 			<div id="related-articles">
 				<p><strong>Some other articles you might like:</strong></p>
 				<ul>
-					{%- for article in collections.article -%}
+					{%- for article in collections.featured -%}
 						{% if (article.url == page.url) %}
 							{#  Above if statement is combined with blank next line to not show current page as a related article #}
 						{% else %}
