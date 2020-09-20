@@ -16,6 +16,7 @@ I've developed a fairly simple Chrome extension called "Mistake" and have shared
 
 <video width="100%" controls>
   <source src="/assets/vid/mistake-chrome-extension-demo.mp4" type="video/mp4">
+  <source src="/assets/vid/mistake-chrome-extension-demo.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
 
