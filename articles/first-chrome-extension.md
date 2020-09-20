@@ -27,11 +27,11 @@ There are soms ways to avoid this, with one of the most common ones is to use **
 
 Unfortunately, the current application I'm working with doesn't have that feature. And after I almost performed an unwanted action on the production environment, thinking it was QA, I went looking for solutions.
 
-Disclaimer: I contemplated working with Angular or React, but decided it just wasn't worth it. It definitely could have made my life easier, but I'm just not comfortable enough with it (yet) and I decided to go plain Javascript. This was something I actually needed, so I wanted to have a functional version ASAP.
+_Disclaimer: I contemplated working with Angular or React, but decided it just wasn't worth it. It definitely could have made my life easier, but I'm just not comfortable enough with it (yet) and I decided to go plain Javascript. This was something I actually needed, so I wanted to have a functional version ASAP._
 
 ## Out of the box: Stylish
 
-The first thing I found was [Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe/related?hl=en). It lets you choose customized styles/themes for popular websites. But you can also write some of your own styles and apply it to URL that match certain patterns.
+The first thing I found was [Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe/related?hl=en). It lets you choose customized styles/themes for popular websites. But you can also write some of your own styles and apply it to URLs that match certain patterns.
 Which sparked the idea to build something similar, which would allow me to display a custom message at the top of certain webpages. These messages could then serve as an indication of the environment in which I'm currently working.
 
 ## Getting started on a custom solution
