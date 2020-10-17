@@ -12,7 +12,7 @@ containsCodeSnippet: true
 
 ## TL;DR
 
-I've developed a fairly simple Chrome extension called "Mistake" and have shared the source code on [Github](https://github.com/carlos-ds/mistake). To install the extension and try it yourself, follow the instructions on Github. I've made a small video to show how it works, you can also read more about that in this article.
+I've developed a fairly simple Chrome extension called "Mistake" and have shared the source code on [Github](https://github.com/carlos-ds/mistake). To install the extension and try it yourself, follow the instructions on Github. I've made a small video to show how it works:
 
 <video width="100%" controls>
   <source src="/assets/vid/mistake-chrome-extension-demo.mp4" type="video/mp4">
@@ -32,8 +32,9 @@ _Disclaimer: I contemplated working with Angular or React, but decided it just w
 
 ## Out of the box: Stylish
 
-The first thing I found was [Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe/related?hl=en). It lets you choose customized styles/themes for popular websites. But you can also write some of your own styles and apply it to URLs that match certain patterns.
-Which sparked the idea to build something similar, which would allow me to display a custom message at the top of certain webpages. These messages could then serve as an indication of the environment in which I'm currently working.
+The first thing I found was [Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe/related?hl=en). It lets you choose customized styles/themes for popular websites. But you can also **write your own styles** and **apply it to URLs that match certain patterns**.
+
+Which sparked the idea to build something similar, that would allow me to display a custom message at the top of certain webpages. These messages could then serve as an indication of the environment in which I'm currently working.
 
 ## Getting started on a custom solution
 
@@ -65,8 +66,9 @@ Access to the _webNavigation API_ is required, because every time a user navigat
 
 ## Elaborating the options page
 
-Next, we can get to work on the _options page_ (options.html). This page lets the user define certain options. Let's look at an example for this extension:
-e.g. _As a user, I want to display a message "This is your local environment!" on any URL that begins with "https://localhost"_
+Next, we can get to work on the _options page_ (options.html). This page lets the user define certain options. But first, let's recap our user story:
+
+_As a user, I want to display a message "This is your local environment!" on any URL that begins with "http://localhost"_
 
 In short, we'll give users 3 options for pattern matching:
 
