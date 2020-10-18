@@ -98,6 +98,11 @@ a:hover {
   text-decoration: none;
 }
 
+.inline-code {
+  font-family: monospace;
+  background: #ddd;
+}
+
 /* Nav */
 #menu {
   text-align: left;
@@ -238,7 +243,7 @@ a.blog-title {
 
 /* Blog Article */
 #blog-container {
-  width: 50%;
+  width: 60%;
   padding: 2rem;
 }
 
