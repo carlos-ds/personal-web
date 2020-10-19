@@ -1,9 +1,9 @@
 ---
 layout: layouts/article-layout.njk
-title: "How to detect if a user is online or offline"
-date: 2020-09-09
+title: "Is the user online or offline?"
+date: 2020-10-19
 tags: ["article", "featured"]
-preview: "This one is quite easy actually."
+preview: "Working with the Navigator object and online/offline browser events."
 description: "Learn how to work with the navigator.onLine property and the online/offline browser events."
 containsCodeSnippet: true
 ---
@@ -17,6 +17,18 @@ After testing, I had a look at how it was implemented and was pleasantly surpris
 ## Navigator.onLine
 
 The [Navigator object](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events), which you can access in the browser via <span class="inline-code">window.navigator</span>, has an <span class="inline-code">onLine</span> property. This boolean is prone to false positives, but we weren't looking for perfect coverage on this one.
+
+Mind the capital 'L' though!
+
+<pre>
+  <code class="language-javascript">
+  window.navigator.online
+  // undefined
+
+  window.navigator.onLine
+  // true
+  </code>
+</pre>
 
 ## Online and offline events
 
@@ -60,7 +72,7 @@ Want to try it out? Copy and paste the following code into an HTML file and open
 
 ## NetworkInformation
 
-Although out of scope for our use case, it was interesting to discover <span class="inline-code">Navigator.connection</span> property contained more network goodies, in the form of a [NetworkInformation instance](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation).
+Although out of scope for our use case, it was interesting to discover <span class="inline-code">window.navigation.connection</span> contained more network goodies, in the form of a [NetworkInformation instance](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation).
 
 In my case, it contained the following:
 
