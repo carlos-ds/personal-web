@@ -258,7 +258,7 @@ a.blog-title {
   margin-bottom: 4rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 992px) {
   #menu ul {
     padding-left: 2rem;
     text-align: left;
