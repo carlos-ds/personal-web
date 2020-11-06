@@ -1,7 +1,7 @@
 ---
 layout: layouts/article-layout.njk
 title: "Ode to git stash"
-date: 2020-11-04
+date: 2020-11-06
 tags: ["article", "featured"]
 preview: "Push it away and pop it back in."
 description: "Git stash is easy to use. Use 'git stash push' to push your changes away and 'git stash pop' to pop them back in."
