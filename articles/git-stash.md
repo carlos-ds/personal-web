@@ -19,7 +19,7 @@ The stash command makes this process as clean as a whistle:
 <pre>
   <code class="language-git">
   $ git stash push
-  Saved working directory and index state WIP on develop: ...
+  Saved working directory and index state WIP on develop: 31ad768 Added alt tag on homepage image of myself
   </code>
 </pre>
 
@@ -34,12 +34,13 @@ We can now safely perform <code class="inline-code">git pull</code>, which updat
   Your branch is up to date with 'origin/develop'.
 
   Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)    
-        modified:   index.html
+    (use "git add &lt;file&gt;..." to update what will be committed)
+    (use "git restore &lt;file&gt;..." to discard changes in working directory)
+          modified:   articles/git-stash.md
+          modified:   index.html
 
   no changes added to commit (use "git add" and/or "git commit -a")
-  Dropped refs/stash@{0} (d04b071943b57f8705b3ef784e6d95a8f4564c26)
+  Dropped refs/stash@{0} (f34a4648801daed4f0c20535ff7a3cd766df5fe3)
   </code>
 </pre>
 
