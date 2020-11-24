@@ -158,6 +158,7 @@ section {
 /* About */
 section:nth-of-type(even) {
   background-color: var(--tertiary-color);
+  border-radius: 2rem;
 }
 
 #social {
@@ -175,24 +176,58 @@ section:nth-of-type(even) {
 }
 
 #listing article {
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  grid-template-columns: 1fr repeat(5, 1fr);
+  grid-template-areas:
+    "date title title title title title"
+    ".... preview preview preview preview preview";
+  column-gap: 1rem;
+  row-gap: 2rem;
   padding: 3rem 2rem;
 }
 
-a.blog-title {
-  color: var(--text-color);
-  font-weight: 300;
-  text-transform: uppercase;
-  border-bottom: none;
+#listing article:nth-of-type(2n) {
+  background-color: var(--tertiary-color);
+  border-radius: 2rem;
 }
 
-.article-date {
-  color: rgb(133, 133, 133);
-  font-weight: normal;
+article .article-date {
+  grid-area: date;
+}
+
+article .article-date span {
+  background: white;
+  border: 1px solid var(--text-color);
   font-size: 1rem;
+  border-radius: 0.25rem;
+  font-style: italic;
+  padding: 0.25rem;
 }
 
-.preview {
-  padding-bottom: 1.5rem;
+article:nth-of-type(2n) .article-date span {
+  background: var(--tertiary-color);
+}
+
+article .article-title {
+  grid-area: title;
+}
+
+article .article-preview {
+  grid-area: preview;
+}
+
+article .article-preview p {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.tag {
+  padding: 0.25rem;
+  background: var(--tertiary-color);
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 .btn-primary {
@@ -213,15 +248,6 @@ a.blog-title {
   background-color: var(--secondary-color);
   color: white;
   transition: background-color 0.5s ease;
-}
-
-#listing hr {
-  margin-left: 2rem;
-  width: 50%;
-}
-
-#listing hr:last-of-type {
-  display: none;
 }
 
 #pagination {
@@ -277,8 +303,24 @@ a.blog-title {
     width: 100%;
   }
 
-  .article-date {
-    display: block;
+  #listing article {
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2rem 1fr 1fr;
+    grid-template-areas:
+      "date"
+      "title"
+      "preview";
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+    padding: 3rem 2rem;
+  }
+
+  #listing article:nth-of-type(2n) {
+    background-color: var(--tertiary-color);
+    border-radius: 0;
   }
 
   #blog-post img {
