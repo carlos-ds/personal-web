@@ -198,16 +198,12 @@ article .article-date {
 }
 
 article .article-date span {
-  background: white;
-  border: 1px solid var(--text-color);
+  background: transparent;
+  border: 1px dashed var(--text-color);
   font-size: 1rem;
   border-radius: 0.25rem;
   font-style: italic;
   padding: 0.25rem;
-}
-
-article:nth-of-type(2n) .article-date span {
-  background: var(--tertiary-color);
 }
 
 article .article-title {
