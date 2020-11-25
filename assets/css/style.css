@@ -299,6 +299,10 @@ article .article-preview p {
     width: 100%;
   }
 
+  section:nth-of-type(even) {
+    border-radius: 0;
+  }
+
   #listing article {
     display: grid;
     align-items: center;
