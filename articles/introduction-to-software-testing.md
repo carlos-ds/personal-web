@@ -41,15 +41,15 @@ Up to here, I was very enthusiastic. There's a lot of valuable information in th
 
 However, the third module is where I started to feel lost. Some advice from the videos is definitely actionable (e.g. "also document what can not be tested"), but the content here feels outdated and too comprehensive. More specifically, the part about **defect reporting** seems like something I could've made in half an hour of browsing through JIRA tickets.
 
-To make matters worse, the exercise we were given was an absolute fluke. You are asked to **draft a test plan** by applying what you've learnt in this module, then submit it for review by your fellow students. The requirements make it feel like this is an application running on Windows 3.11. Hello, 2020?!
+To make matters worse, the exercise we were given was an absolute mess. You are asked to **draft a test plan** for a fictional application by applying what you've learned, then submit it for review by your fellow students. I'm sorry to say that the requirements of the application under test make it feel like we're back at MS-DOS. Hello, 2020?!
 
-After submission, you're also asked to review 3 test plans from other students, using a questionnaire (e.g. "does the test plan include information about X?"). Unfortunately, based on the examples I've seen, a lot of students don't take the exercise (both writing and reviewing) serious and just want to make it through. I also seriously doubt whether the questionnaire truly evaluated the quality of a submission.
+After submission, you're also asked to review 3 test plans from other students, using a list of multiple choice questions (e.g. "does the test plan include information about X?"). Unfortunately, based on the examples I've seen, a lot of students don't take the exercise (both writing and reviewing) serious and just want to make it through. I also seriously doubt whether the grading system truly evaluated the quality of a submission.
 
 ## Writing unit tests
 
-The fourth and final module covers writing **unit tests** ([JUnit](https://junit.org/), [Mockito](https://site.mockito.org/)) and **code coverage** ([JaCoCo](https://www.eclemma.org/jacoco/)). You're given some practical assignments, graded via automated scripts, which are reasonably qualitative.
+The fourth and final module covers **writing unit tests** ([JUnit](https://junit.org/), [Mockito](https://site.mockito.org/)) and **code coverage** ([JaCoCo](https://www.eclemma.org/jacoco/)). You're given some practical assignments, graded via automated scripts, which are reasonably qualitative.
 
-I definitely learned a thing or two here, but it didn't feel like the right time and place. The assignments' code quality is also up for debate (based on some comments on Coursera), but my knowledge of Java is too limited to address that.
+I definitely learned a thing or two here, but it didn't feel like the right time and place. Neither is it detailed enough to really grasp unit testing. Shouldn't this be incorporated into another course of this specialization?
 
 ## Conclusion
 
