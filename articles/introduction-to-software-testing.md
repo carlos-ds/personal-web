@@ -3,9 +3,9 @@ layout: layouts/article-layout.njk
 title: "Course review: Introduction to software testing (Coursera)"
 date: 2020-11-27
 tags: ["article", "featured"]
-preview: "The good, the bad and the ugly."
+preview: "The good and the not so good."
 description: "My personal opinion on the Coursera course 'Introduction to software testing'."
-containsCodeSnippet: true
+containsCodeSnippet: false
 ---
 
 # {{ title }}
