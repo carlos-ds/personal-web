@@ -29,7 +29,7 @@ Before we dive in, I'll summarize it for you:
 
 Although I'm not the biggest fan, you can't blame this course for not doing what it says on the tin: provide an _introduction to software testing_. It touches on a fair amount of theoretical concepts which testers should understand. And even developers will find there's a lot in it for them.
 
-Module 1 starts off by answering the questions _"What is a test?"_, _"Why should we test?"_ and _"How can we test well?"_. The course then discusses the differences between validation and verification, and progresses towards [the V-Model](<https://en.wikipedia.org/wiki/V-Model_(software*development)>).
+Module 1 starts off by answering the questions _"What is a test?"_, _"Why should we test?"_ and _"How can we test well?"_. The course then discusses the differences between validation and verification, and progresses towards [the V-Model](<https://en.wikipedia.org/wiki/V-Model_(software development)>).
 
 Although a strict application of the V-Model is perhaps rather unusual, being conscious of it is still beneficial towards a better understanding of software testing.
 
