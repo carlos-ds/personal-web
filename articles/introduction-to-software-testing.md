@@ -23,13 +23,13 @@ Before we dive in, I'll summarize it for you:
 **The bad**:
 
 - Interaction with students and teachers is next to nothing.
-- Course content feels outdated at times.
+- Course content feels outdated or out of place at times.
 
 ## The theory behind testing
 
 Although I'm not the biggest fan, you can't blame this course for not doing what it says on the tin: provide an _introduction to software testing_. It touches on a fair amount of theoretical concepts which testers should understand. And even developers will find there's a lot in it for them.
 
-Module 1 starts off by answering the questions _"What is a test"_, _"Why should we test?"_ and _"How can we test well?"_. The course then discusses the differences between validation and verification, and progresses towards [the V-Model](<https://en.wikipedia.org/wiki/V-Model_(software*development)>).
+Module 1 starts off by answering the questions _"What is a test?"_, _"Why should we test?"_ and _"How can we test well?"_. The course then discusses the differences between validation and verification, and progresses towards [the V-Model](<https://en.wikipedia.org/wiki/V-Model_(software*development)>).
 
 Although a strict application of the V-Model is perhaps rather unusual, being conscious of it is still beneficial towards a better understanding of software testing.
 
@@ -55,6 +55,4 @@ I definitely learned a thing or two here, but it didn't feel like the right time
 
 I would very much recommend the first and second module of this course. They touched on a lot of interesting topics and were delivered at the right pace for me.
 
-But the third and fourth module just didn't feel right. That holds me back from taking the next course in the specialization, which currently also has a lower review score. When you add the lack of interaction with other students and teachers, it's really demotivating to continue.
-
-Hopefully, the course organizers can still find a way to improve the course based on all the feedback.
+But the third and fourth module just didn't feel right. That holds me back from taking the next course in the specialization, which currently also has a lower review score. When you add the lack of interaction with other students and teachers, it's not encouraging me to continue. But it was well worth the effort!
