@@ -12,7 +12,7 @@ containsCodeSnippet: false
 
 A couple of months ago, I took a course on Coursera named _["Introduction to software testing"](https://www.coursera.org/learn/introduction-software-testing)_, which is a part of the _["Software testing and automation"](https://www.coursera.org/specializations/software-testing-automation)_ specialization. And I'd like to add my 2 cents.
 
-Before we dive in, I'll summarize it for you:
+Before we dive in, I'll TL;DR it for you:
 
 **The good**:
 
@@ -25,9 +25,9 @@ Before we dive in, I'll summarize it for you:
 - Interaction with students and teachers is next to nothing.
 - Course content feels outdated or out of place at times.
 
-## The theory behind testing
-
 Although I'm not the biggest fan, you can't blame this course for not doing what it says on the tin: provide an _introduction to software testing_. It touches on a fair amount of theoretical concepts which testers should understand. And even developers will find there's a lot in it for them.
+
+## The theory behind testing
 
 Module 1 starts off by answering the questions _"What is a test?"_, _"Why should we test?"_ and _"How can we test well?"_. The course then discusses the differences between validation and verification, and progresses towards [the V-Model](<https://en.wikipedia.org/wiki/V-Model_(software_development)>).
 
@@ -43,16 +43,16 @@ However, the third module is where I started to feel lost. Some advice from the 
 
 To make matters worse, the exercise we were given was an absolute mess. You are asked to **draft a test plan** for a fictional application by applying what you've learned, then submit it for review by your fellow students. I'm sorry to say that the requirements of the application under test make it feel like we're back at MS-DOS. Hello, 2020?!
 
-After submission, you're also asked to review 3 test plans from other students, using a list of multiple choice questions (e.g. "does the test plan include information about X?"). Unfortunately, based on the examples I've seen, a lot of students don't take the exercise (both writing and reviewing) serious and just want to make it through. I also seriously doubt whether the grading system truly evaluated the quality of a submission.
+After submission, you're also asked to **review test plans** from other students, using a list of multiple choice questions (e.g. "does the test plan include information about X?"). Unfortunately, based on the examples I've seen, a lot of students don't take the exercise (both writing and reviewing) serious and just want to make it through. I also seriously doubt whether the grading system truly evaluated the quality of a submission.
 
 ## Writing unit tests
 
-The fourth and final module covers **writing unit tests** ([JUnit](https://junit.org/), [Mockito](https://site.mockito.org/)) and **code coverage** ([JaCoCo](https://www.eclemma.org/jacoco/)). You're given some practical assignments, graded via automated scripts, which are reasonably qualitative.
+The fourth and final module covers **writing unit tests** ([JUnit](https://junit.org/), [Mockito](https://site.mockito.org/)) and **code coverage** ([JaCoCo](https://www.eclemma.org/jacoco/)). You're asked to write unit tests and these should cover a specific percentage of the code and reveal the bugs in the code you were given. These assignments are graded via automated scripts, which is a fairly good process and I really enjoyed working on this.
 
-I definitely learned a thing or two here, but it didn't feel like the right time and place. Neither is it detailed enough to really grasp unit testing. Shouldn't this be incorporated into another course of this specialization?
+Despite my enjoyment, it didn't feel like the right time and place for practical exercises about unit tests. Neither is it detailed enough to really grasp unit testing. Shouldn't this be incorporated into another course of this specialization?
 
 ## Conclusion
 
-I would very much recommend the first and second module of this course. They touched on a lot of interesting topics and were delivered at the right pace for me.
+I would very much recommend the first and second module of this course. But the third and fourth module just didn't feel right.
 
-But the third and fourth module just didn't feel right. That holds me back from taking the next course in the specialization, which currently also has a lower review score. When you add the lack of interaction with other students and teachers, it's not encouraging me to continue. But it was well worth the effort!
+That holds me back from taking the next course in the specialization, which currently also has a lower review score. When you add the lack of interaction with other students and teachers, it's not encouraging me to continue. But it was well worth the effort!
