@@ -41,7 +41,7 @@ Up to here, I was very enthusiastic. There's a lot of valuable information in th
 
 However, the third module is where I started to feel lost. Some advice from the videos is definitely actionable (e.g. "also document what can not be tested"), but the content here feels outdated and too comprehensive. More specifically, the part about **defect reporting** seems like something I could've made in half an hour of browsing through JIRA tickets.
 
-To make matters worse, the exercise we were given was an absolute mess. You are asked to **draft a test plan** for a fictional application by applying what you've learned, then submit it for review by your fellow students. I'm sorry to say that the requirements of the application under test make it feel like we're back at MS-DOS. Hello, 2020?!
+To make matters worse, the exercise we were given was quite frustrating. You are asked to **draft a test plan** for a fictional application by applying what you've learned, then submit it for review by your fellow students. I'm sorry to say that the requirements of the application under test make it feel like we're back at MS-DOS. Hello, 2020?!
 
 After submission, you're also asked to **review test plans** from other students, using a list of multiple choice questions (e.g. "does the test plan include information about X?"). Unfortunately, based on the examples I've seen, a lot of students don't take the exercise (both writing and reviewing) serious and just want to make it through. I also seriously doubt whether the grading system truly evaluated the quality of a submission.
 
