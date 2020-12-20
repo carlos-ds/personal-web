@@ -49,7 +49,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin: 1rem 0;
 }
 
@@ -153,6 +153,25 @@ section {
 
 #intro img {
   margin-top: 1.75rem;
+}
+
+#flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.project {
+  background: var(--secondary-color);
+  border-radius: 2rem;
+  padding: 2rem;
+  width: 40%;
+}
+
+.project a {
+  color: #fff;
+  border-bottom: none;
 }
 
 /* About */
