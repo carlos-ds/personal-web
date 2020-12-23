@@ -53,6 +53,11 @@ h3 {
   margin: 1rem 0;
 }
 
+h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
 a {
   color: var(--text-color);
   border-bottom: 2px solid rgb(160, 160, 160);
@@ -155,23 +160,30 @@ section {
   margin-top: 1.75rem;
 }
 
-#flex {
+#projects {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   color: #fff;
 }
 
-.project {
+#projects * {
+  color: #fff;
+}
+
+#projects a.project {
+  margin-top: 1.5rem;
+  display: block;
   background: var(--secondary-color);
   border-radius: 2rem;
   padding: 2rem;
   width: 40%;
+  box-shadow: 0.5rem 0.5rem 0.01rem 0.01rem rgba(0, 0, 255, 0.2);
 }
 
-.project a {
-  color: #fff;
-  border-bottom: none;
+.project:hover {
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 /* About */
@@ -320,6 +332,10 @@ article .article-preview p {
 
   section:nth-of-type(even) {
     border-radius: 0;
+  }
+
+  #projects a.project {
+    width: 100%;
   }
 
   #listing article {
