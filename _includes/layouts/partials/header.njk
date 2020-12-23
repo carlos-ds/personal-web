@@ -10,6 +10,9 @@
 
 	gtag('config', 'UA-64502598-2');
 	</script>
+	{% if (containsCodeSnippet === true) %}
+        <script defer src="/assets/js/prism.js"></script>
+    {% endif %}
 	<title>{{ title }}</title>
 	<meta name="description" content="{{ description }}">
 	<meta charset="utf-8" />

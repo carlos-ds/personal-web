@@ -49,8 +49,13 @@ h2 {
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin: 1rem 0;
+}
+
+h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 a {
@@ -153,6 +158,32 @@ section {
 
 #intro img {
   margin-top: 1.75rem;
+}
+
+#projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  color: #fff;
+}
+
+#projects * {
+  color: #fff;
+}
+
+#projects a.project {
+  margin-top: 1.5rem;
+  display: block;
+  background: var(--secondary-color);
+  border-radius: 2rem;
+  padding: 2rem;
+  width: 40%;
+  box-shadow: 0.5rem 0.5rem 0.01rem 0.01rem rgba(0, 0, 255, 0.2);
+}
+
+.project:hover {
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 /* About */
@@ -301,6 +332,10 @@ article .article-preview p {
 
   section:nth-of-type(even) {
     border-radius: 0;
+  }
+
+  #projects a.project {
+    width: 100%;
   }
 
   #listing article {
