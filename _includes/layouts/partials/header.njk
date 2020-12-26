@@ -10,14 +10,14 @@
 
 	gtag('config', 'UA-64502598-2');
 	</script>
-	{% if (containsCodeSnippet === true) %}
-        <script defer src="/assets/js/prism.js"></script>
-    {% endif %}
 	<title>{{ title }}</title>
 	<meta name="description" content="{{ description }}">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	{% if (containsCodeSnippet === true) %}
+        <script defer src="/assets/js/prism.js"></script>
+    {% endif %}
 	{% if (containsCodeSnippet === true) %}
 		<link rel="stylesheet" href="/assets/css/prism-1.21.0.css" type="text/css" />
 	{% endif %}
