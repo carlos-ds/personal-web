@@ -287,6 +287,10 @@ article .article-preview p {
   padding-left: 2rem;
 }
 
+#uses img {
+  width: 60%;
+}
+
 /* Blog Article */
 #blog-container {
   width: 60%;
@@ -352,6 +356,10 @@ article .article-preview p {
   }
 
   #blog-post img {
+    width: 100%;
+  }
+
+  #uses img {
     width: 100%;
   }
 
