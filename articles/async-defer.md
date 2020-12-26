@@ -1,38 +1,41 @@
 ---
 layout: layouts/article-layout.njk
-title: "Using <script defer>"
+title: "Loading scripts with async / defer"
 date: 2020-12-26
 tags: ["article", "featured"]
-preview: "The choices you'll make when including scripts."
+preview: "The choices we make when including scripts."
 description: "Learn about async and defer, two attributes of <script> tags which have proven useful ever since they were accepted by most modern browsers."
 containsCodeSnippet: true
 ---
 
-## Introduction: prism.js
+## Introduction: prism
 
 To style code blocks on this website, I use [Prism](https://prismjs.com/). It's dead simple, lightweight and looks great everywhere. Plus, you can select just the languages and themes you need, so there's little to no overhead.
 
 <pre>
 <code class="language-html">
-Hello, this is styled with Prism!
+&lt;p class="example"&gt;This is styled with Prism!&lt;/p&gt;
 </code>
 </pre>
 
-Until recently, the <code class="inline-code">&lt;script&gt;</code> tag for Prism was located just before the closing <code class="inline-code">&lt;/body&gt;</code> tag. Just like everyone always told us to do, right?
+Until recently, I included <code class="inline-code">&lt;script&gt;</code> tag for Prism **just before the closing** <code class="inline-code">&lt;/body&gt;</code> **tag**. Just like everyone always told us to do, right? Execution is synchronous, and you don't want your scripts blocking the rest of your page.
 
-However, the **attributes** <code class="inline-code">async</code> **and** <code class="inline-code">defer</code> allow you to reach the same goal, namely to make sure that fetching and/or executing scripts does not block the parsing/rendering of your website.
+## Async & defer
+
+However, the **attributes** <code class="inline-code">async</code> **and** <code class="inline-code">defer</code> allow you to reach the same goal, namely to make sure that fetching and/or executing scripts does not block parsing.
 
 As a simplified example, let's assume my page contains the following code:
 
 <pre class="language-html">
 <code class="language-html">
-    &lt;html&gt;
-        &lt;head&gt;
-            &lt;title&gt;Async & defer&lt;/title&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-        &lt;/body&gt;
-    &lt;/html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Async & defer&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
 </code>
 </pre>
 
@@ -44,21 +47,73 @@ Somewhere in this code, we need to include the script for Prism:
 </code>
 </pre>
 
-So what are our options?
+What are our options?
 
-- Include it somewhere in the <code class="inline-code">&lt;head&gt;</code> section
-- Include it just before the <code class="inline-code">&lt;/body&gt;</code> tag
-- Async
-- Defer
+- Include it in the <code class="inline-code">&lt;head&gt;</code> section. But we know that's just a bad practice.
+- Include it just before the <code class="inline-code">&lt;/body&gt;</code> tag.
+- Include it with <code class="inline-code">async</code> in the <code class="inline-code">&lt;head&gt;</code> section.
+- Include it with <code class="inline-code">defer</code> in the <code class="inline-code">&lt;head&gt;</code> section.
 
-Let's go over them one by one.
+To be fair, I can't make the differences any clearer than [Flavio Copes](https://flaviocopes.com/javascript-async-defer/) can. This means we can skip the detailed comparison here and go straight to how I approached this: with <code class="inline-code">defer</code>.
 
-##
+## Defer
 
-Moved prism.js from body of the page to head with defer With defer, the script is being fetched while the HTML is being parsed. After the HTML has been parsed, and provided it has been fetched by then, it is executed. Only after execution, the DOMContentLoaded event is fired.
+Deferred scripts are fetched asynchronously and executed immediately after parsing of the DOM.
 
-MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script Good article by Flavio Copes about the possibilities and differences: https://flaviocopes.com/javascript-async-defer/
+Our simplified example now looks like this:
 
-## Resources
+<pre class="language-html">
+<code class="language-html">
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script defer src="/assets/js/prism.js"&gt;&lt;/script&gt;
+        &lt;title&gt;Async & defer&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
 
-To be fair, I can't make this topic any clearer than [Flavio Copes](https://flaviocopes.com/javascript-async-defer/) can. (Hint: he's got some pretty good courses and material on other stuff too.)
+The flow here is:
+
+- Parsing starts
+- Parser encounters deferred script ➡️ fetching starts
+- Parsing continues in parallel with fetching
+- Fetching completes
+- Parsing completes
+- Script is executed
+- [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event) event is fired
+
+## Async
+
+With <code class="inline-code">async</code>, the flow would be a little different:
+
+- Parsing starts
+- Parser encounters asynchronous script ➡️ fetching starts
+- Parsing continues in parallel with fetching
+- Fetching completes
+- Script is executed
+- Parsing completes
+- DOMContentLoaded event is fired
+
+This means that **execution occurs immediately after fetching has completed**. As opposed to <code class="inline-code">defer</code>, which executes only after the parsing has fully completed. Because we rely on the whole DOM being present before Prism does its magic, I preferred to defer the Prism script.
+
+Another difference is that deferred scripts are executed in the order in which they were encountered. That's not the case for asynchronous scripts, making them a **prime candidate for standalone scripts** (e.g. ads, analytics ...).
+
+## Why not include it before &lt;/body&gt;&nbsp;?
+
+Well, <code class="inline-code">async</code> and <code class="inline-code">defer</code> are **not fully compatible** with IE9 and older. However, I sincerely hope that's not relevant for you.
+
+They also **don't guarantee faster loading times**. In my case, the time it takes before DOMContentLoaded is fired differs just a couple of miliseconds when the script is deferred.
+
+The best piece of advice: **perform tests** if you plan to switch things up. The number of factors is just too high to provide a one-size-fits-all approach:
+
+- What if parsing ends before the fetching of your script?
+- What if you combine multiple approaches?
+- How much of your bandwidth is dedicated to fetching compared to other tasks that require bandwidth?
+
+Then why go through all the trouble?
+
+For me, using asynchronous or deferred scripts is about **cleaning up your code**. Because <code class="inline-code">&lt;head&gt;</code> is where our scripts are meant to be. Placing them anywhere else was just a **cheeky workaround** in the endeavour for maximum performance.
