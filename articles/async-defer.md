@@ -18,7 +18,7 @@ To style code blocks on this website, I use [Prism](https://prismjs.com/). It's 
 </code>
 </pre>
 
-Until recently, I included <code class="inline-code">&lt;script&gt;</code> tag for Prism **just before the closing** <code class="inline-code">&lt;/body&gt;</code> **tag**. Just like everyone always told us to do, right? Execution is synchronous, and you don't want your scripts blocking the rest of your page.
+Until recently, I included the <code class="inline-code">&lt;script&gt;</code> tag for Prism **just before the closing** <code class="inline-code">&lt;/body&gt;</code> **tag**. Just like everyone always told us to do, right? Execution is synchronous, and you don't want your scripts blocking the rest of your page.
 
 ## Async & defer
 
@@ -102,7 +102,7 @@ This means that **execution occurs immediately after fetching has completed**. A
 
 Another difference is that deferred scripts are executed in the order in which they were encountered. That's not the case for asynchronous scripts, making them a **prime candidate for standalone scripts** (e.g. ads, analytics ...).
 
-## Why not include it before &lt;/body&gt;&nbsp;?
+## Is the juice worth the squeeze?
 
 Well, <code class="inline-code">async</code> and <code class="inline-code">defer</code> are **not fully compatible** with IE9 and older. However, I sincerely hope that's not relevant for you.
 
@@ -116,4 +116,4 @@ The best piece of advice: **perform tests** if you plan to switch things up. The
 
 Then why go through all the trouble?
 
-For me, using asynchronous or deferred scripts is about **cleaning up your code**. Because <code class="inline-code">&lt;head&gt;</code> is where our scripts are meant to be. Placing them anywhere else was just a **cheeky workaround** in the endeavour for maximum performance.
+For me, using asynchronous or deferred scripts is about **cleaning up your code**. Because our scripts are meant to be somewhere in the <code class="inline-code">&lt;head&gt;</code>. Placing them anywhere else was just a **cheeky workaround** in the endeavour for maximum performance.
