@@ -11,6 +11,16 @@
   --tertiary-color: #ffe680;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 /* General styling! */
 body {
   margin: 0 0 8rem 0;
@@ -363,12 +373,7 @@ article .article-preview p {
     width: 100%;
   }
 
-  #blog-post {
-    width: auto;
-    padding: 2rem;
-  }
-
   #blog-container {
-    width: 90%;
+    width: 100%;
   }
 }
