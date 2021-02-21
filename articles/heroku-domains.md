@@ -1,7 +1,7 @@
 ---
 layout: layouts/article-layout.njk
 title: 'Connecting a domain to Heroku'
-date: 2020-01-31
+date: 2021-01-31
 tags: ['article']
 preview: 'Fiddling with DNS records.'
 description: 'Learn how to connect your domain name to a Heroku application by managing Heroku settigns and adding the necessary DNS records.'
