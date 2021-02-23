@@ -222,8 +222,8 @@ section:nth-of-type(even) {
   align-items: center;
   justify-items: start;
   grid-template-areas:
-    'title'
     'date'
+    'title'
     'preview';
   column-gap: 1rem;
   row-gap: 2rem;
@@ -253,9 +253,6 @@ article .article-date span {
 
 article .article-title {
   grid-area: title;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.25rem;
 }
 
 article .article-preview {
@@ -353,13 +350,6 @@ article .article-preview p {
   }
 
   #listing article {
-    display: grid;
-    align-items: center;
-    justify-items: start;
-    grid-template-areas:
-      'title'
-      'date'
-      'preview';
     column-gap: 1rem;
     row-gap: 1.5rem;
     padding: 3rem 2rem;
