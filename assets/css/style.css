@@ -8,7 +8,9 @@
   --code-font: 'Consolas', monospace, monospace;
   --text-color: #111111;
   --secondary-color: #2358d1;
+  --secondary-box-shadow: rgba(0, 0, 255, 0.2);
   --tertiary-color: #ffe680;
+  --tertiary-box-shadow: #ffeb99;
 }
 
 html {
@@ -189,7 +191,7 @@ section {
   border-radius: 2rem;
   padding: 2rem;
   width: 45%;
-  box-shadow: 0.5rem 0.5rem 0.01rem 0.01rem rgba(0, 0, 255, 0.2);
+  box-shadow: 0.25rem 0.25rem 0.01rem 0.01rem rgba(0, 0, 255, 0.2);
 }
 
 .project:hover {
@@ -201,6 +203,7 @@ section {
 section:nth-of-type(even) {
   background-color: var(--tertiary-color);
   border-radius: 2rem;
+  box-shadow: 0.25rem 0.25rem 0.01rem 0.01rem #ffeb99;
 }
 
 #social {
@@ -232,7 +235,7 @@ section:nth-of-type(even) {
   border: 1px solid black;
   margin-top: 5rem;
   width: 60%;
-  box-shadow: 1rem 1rem rgba(0, 0, 255, 0.2);
+  box-shadow: 0.25rem 0.25rem 0.01rem 0.01rem rgba(0, 0, 255, 0.2);
 }
 
 #listing article:first-of-type {
