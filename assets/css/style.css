@@ -10,7 +10,7 @@
   --secondary-color: #2358d1;
   --secondary-box-shadow: rgba(0, 0, 255, 0.2);
   --tertiary-color: #ffe680;
-  --tertiary-box-shadow: #ffeb99;
+  --tertiary-box-shadow: #eeeeee;
 }
 
 html {
@@ -191,7 +191,7 @@ section {
   border-radius: 2rem;
   padding: 2rem;
   width: 45%;
-  box-shadow: 0.25rem 0.25rem 0.01rem 0.01rem rgba(0, 0, 255, 0.2);
+  box-shadow: 0.3rem 0.3rem 0.01rem 0.01rem rgba(0, 0, 255, 0.2);
 }
 
 .project:hover {
@@ -203,7 +203,7 @@ section {
 section:nth-of-type(even) {
   background-color: var(--tertiary-color);
   border-radius: 2rem;
-  box-shadow: 0.25rem 0.25rem 0.01rem 0.01rem #ffeb99;
+  box-shadow: 0.3rem 0.3rem 0.01rem 0.01rem var(--tertiary-box-shadow);
 }
 
 #social {
