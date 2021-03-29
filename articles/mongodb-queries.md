@@ -12,7 +12,7 @@ containsCodeSnippet: true
 
 When I started working with MongoDB, I decided to keep helpful queries in a notebook. Maybe you'll find some of them handy too. Let's dive in!
 
-## db.isMaster()
+## db.isMaster
 
 Almost daily, I find myself manipulating data on one of our test environments. However, in our set-up, we can only write to the **primary instance** in our **replica set**.
 
@@ -293,3 +293,14 @@ db.collection.find({
 })
 </code>
 </pre>
+
+## Final notes on MongoDB
+
+After a couple of years of working with and learning about MongoDB, I find it incredibly efficient and enjoyable. The [documentation](https://docs.mongodb.com/) is top-notch, [MongoDB university](https://university.mongodb.com/) provides excellent courses and managed tools such as [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) are great and they have a nice free tier too!
+
+To get the most out of it, I use:
+
+- [Robo3T](https://robomongo.org/), formerly known as Robomongo, for manual data validation and executing scripts. It's rather minimal and thus dead simple to work with.
+- [MongoDB Compass](https://www.mongodb.com/products/compass) for creating and debugging aggregation queries or whenever I need a bit more than what Robo3T offers.
+
+_Note: I'm not sponsored or endorsed by MongoDB in any way._
