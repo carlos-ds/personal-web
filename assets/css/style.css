@@ -142,15 +142,23 @@ a:hover {
 }
 
 #menu li a {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: var(--secondary-color);
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   font-family: var(--header-font);
+  position: relative;
+  top: 0;
 }
 
-#menu li a:hover {
+#menu li:hover a.inactive {
+  top: 0;
+}
+
+#menu li:hover a {
   text-decoration: none;
+  top: -0.25rem;
+  transition: all 0.25s ease 0s;
 }
 
 #menu li:last-of-type {
