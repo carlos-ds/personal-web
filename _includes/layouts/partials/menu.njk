@@ -1,4 +1,4 @@
-<section id="menu">
+<section id="menu" role="navigation">
     <ul>
         <li>
             <a {% if (page.url == '/') %}class="inactive"{% endif %} href="/">Home</a>
@@ -6,6 +6,9 @@
         <li>
             {% set regExp = r/^\/blog.*/g %}
             <a {% if regExp.test(page.url) %}class="inactive"{% endif %} href="/blog/page-1/">Blog</a>
+        </li>
+        <li>
+            <a {% if (page.url == '/projects/') %}class="inactive"{% endif %} href="/projects">Projects</a>
         </li>
         <li>
             <a {% if (page.url == '/about/') %}class="inactive"{% endif %}href="/about/">About</a>

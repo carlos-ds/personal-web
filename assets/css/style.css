@@ -193,7 +193,7 @@ section {
 }
 
 #projects a.project {
-  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   display: block;
   background: var(--secondary-color);
   border-radius: 2rem;
