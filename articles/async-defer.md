@@ -1,12 +1,14 @@
 ---
 layout: layouts/article-layout.njk
-title: "Loading scripts with async / defer"
+title: 'Loading scripts with async / defer'
 date: 2020-12-26
-tags: ["article", "featured"]
-preview: "The choices we make when including scripts."
-description: "Learn about async and defer, two attributes of <script> tags which have proven useful ever since they were accepted by most modern browsers."
+tags: ['article', 'featured']
+preview: 'The choices we make when including scripts.'
+description: 'Learn about async and defer, two attributes of <script> tags which have proven useful ever since they were accepted by most modern browsers.'
 containsCodeSnippet: true
 ---
+
+# {{ title }}
 
 ## Introduction: prism
 
