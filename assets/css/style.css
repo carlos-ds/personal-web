@@ -259,8 +259,7 @@ article .article-date {
   border-radius: 0.25rem;
   padding: 0.5rem;
   letter-spacing: 2px;
-  background: var(--text-color);
-  color: #fff;
+  background: var(--tertiary-color);
   border-radius: 10%;
 }
 
