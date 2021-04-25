@@ -3,8 +3,8 @@ layout: layouts/article-layout.njk
 title: 'Integrating Jest with Github Actions'
 date: 2021-04-23
 tags: ['article']
-preview: 'OpenSSH took the pain away.'
-description: 'This walkthrough focuses on adding SSH to Github on Windows, but the process for other services or on another OS is quite similar.'
+preview: 'Run tests, merge into master and push.'
+description: "Set up a basic workflow with Github Actions. We'll cover how to automate running tests (Jest) on a development branch, merging into master and pushing."
 ---
 
 # {{ title }}
@@ -13,9 +13,9 @@ In this article, we'll set up a basic workflow with [Github Actions](https://git
 
 ## Who is it for?
 
-Currently, Github Actions is free for all public repositories. And private repositories have up to 2.000 free minutes per month. Additional minutes are available at a per-minute basis.
+Currently, Github Actions is **free** for all **public repositories**. And **private repositories** have up to **2.000 free minutes per month**. Additional minutes are available at a per-minute basis.
 
-The flow described above is fairly simple and takes more or less 1 minute to finish. Hence, if our example repository was private (which it is not), it would allow me to automatically pull, test and merge around **2000 times per month**. That equates to **60 pushes per day**, not something you're likely to encounter for a personal side project.
+The flow described below is fairly simple and takes more or less 1 minute to finish. Hence, if our example repository was private (which it is not), it would allow me to automatically pull, test and merge around **2000 times per month**. That equates to **60 pushes per day**, not something you're likely to encounter for a personal side project.
 
 ## What will we automate?
 
