@@ -15,7 +15,7 @@ In this article, we'll set up a basic workflow with [Github Actions](https://git
 
 Currently, Github Actions is **free** for all **public repositories**. And **private repositories** have up to **2.000 free minutes per month**. Additional minutes are available at a per-minute basis.
 
-The flow described below is fairly simple and takes more or less 1 minute to finish. Hence, if our example repository was private (which it is not), it would allow me to automatically pull, test and merge around **2000 times per month**. That equates to **60 pushes per day**, not something you're likely to encounter for a personal side project.
+The flow described below is fairly simple and takes more or less 1 minute to finish. Hence, if our example repository was private (which it is not), it would allow me to automatically pull, test and merge around **2000 times per month**. That equates to **66 pushes per day**, not something you're likely to encounter for a personal side project.
 
 ## What will we automate?
 
@@ -141,9 +141,13 @@ There are two options:
 - All tests pass and the workflow proceeds to the next step.
 - A test fails and the workflow exits with a corresponding error code. You receive an e-mail notifying you of this failure. It also shows up in the "Actions" tab of your repository.
 
-Assuming all tests pass, the workflow will continue with the final step. It is now safe to checkout the master branch, merge the development branch into it and push the changes.
+Assuming all tests pass, the workflow will continue with the final step. It checks out the master branch, merges the development branch into it and push the changes.
 
 Notice how the **pipe symbol** allows specifying multiple commands in one step. For Ubuntu, these commands are run in sequence with git bash.
+
+## Reports
+
+In the Actions tab of your re
 
 ## Master has been pushed. What's next?
 
