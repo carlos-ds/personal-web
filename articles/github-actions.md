@@ -145,10 +145,6 @@ Assuming all tests pass, the workflow will continue with the final step. It chec
 
 Notice how the **pipe symbol** allows specifying multiple commands in one step. For Ubuntu, these commands are run in sequence with git bash.
 
-## Reports
-
-In the Actions tab of your re
-
 ## Master has been pushed. What's next?
 
 Well, if you're running an application on a platform like Heroku or Netlify, you can trigger automated deploys by pushing to the master branch. Assuming you have activated that option in your application settings, obviously.
