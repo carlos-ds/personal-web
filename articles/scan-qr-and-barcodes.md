@@ -4,8 +4,7 @@ title: 'Develop a QR/barcode scanner'
 date: 2021-05-24
 tags: ['article']
 preview: 'Should you use ZXing or the Barcode Detection API?'
-description: '3 demo apps, each of which can scan (nearly) any type of QR code or barcode, with a mobile device's camera or the webcam from a desktop or laptop'
-containsCodeSnippet: false
+description: "Learn how to create an app to scan QR/bar codes with a laptop's webcam or smartphone's camera"
 ---
 
 # {{ title }}
