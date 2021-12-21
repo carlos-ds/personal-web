@@ -19,13 +19,13 @@ It also means my brain is now chock-full of development-related reasoning, all d
 
 ## Side project
 
-In my journey to become a developer, it struck me how difficult it is to switch from **consumption** (reading, listening, watching ...) to **production** (writing, coding ...). Yet, I've now reduced my consumption to a bare minimum. Instead, my production has skyrocketed, because next to work I'm also involved in a sizable side project. 
-
-I've always hoped for a side project like this. Perhaps **open-source** would've been even better, but I won't complain. Really getting involved into an open-source project has a **high barrier to entry**. And unfortunately I never managed to cross that barrier. 
+In my journey to become a developer, it struck me how difficult it is to switch from **consumption** (reading, listening, watching ...) to **production** (writing, coding ...). Yet, I've now reduced my consumption to a bare minimum. Instead, my production has skyrocketed, because next to work I'm also involved in a sizable side project.
 
 What am I doing exactly? Well, we are reworking and extending a **web application** for a **non-profit organisation**. My focus is on the front-end (**Angular**) and my partner in crime is in charge of the back-end (**.NET Core**). The application is used by 50+ employees on a near-daily basis. Everything, from the infrastructure and code to the functionality, is in desperate need of improvement. And we're the proverbial MacGyver.
 
-Needless to say, it's enormously relevant and challenging to do this as a side project. But we feel we're getting a lot of love back from the organisation itself, and we hope to improve their life and the life of their clients and employees over the course of multiple years. 
+I've always hoped for a side project like this. Perhaps **open-source** would've been even better, but I won't complain. Really getting involved into an open-source project has a **high barrier to entry**. And unfortunately I never managed to cross that barrier.
+
+Why am I doing this? Because let's face it: it is extremely challenging to do this as a side project. But we feel we're getting a lot of love back from the organisation itself, and we hope to improve their life and the life of their clients and employees over the course of multiple years. 
 
 Next to the love we're getting back, the **experience** I'm gaining is invaluable. The **real-life interactions** with an experienced back-end developer and the users of our application are something I cherish and hope to learn from as much as possible. 
 
