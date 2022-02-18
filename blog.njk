@@ -1,32 +1,20 @@
 ---
 layout: layouts/base-layout.njk
 title: Karel De Smet - Blog
-pagination:
-  data: collections.article
-  size: 5
-  reverse: true
-  alias: articles
-permalink: "/blog/page-{{ pagination.pageNumber + 1 }}/index.html"
 slug: "/blog/"
 ---
-<div id="listing">
-  {% for article in pagination.items %}
+<div id="blog-overview">
+    {% for article in collections.article %}
     <article>
-      <time class="article-date">{{ article.date | date }}</time>
-      <div class="article-title">
-        <a href="{{ article.url | url }}">{{ article.data.title }}</a>
-      </div>
-      <div class="article-preview">
-        <p>{{ article.data.preview }}</p>
-      </div>
+        <div class="article-title">
+            <a href="{{ article.url | url }}">{{ article.data.title }}</a>
+        </div>
+        <time class="article-date">{{ article.date | date }}</time>
+        <div class="article-preview">
+            <p>{{ article.data.preview }}</p>
+        </div>
     </article>
-  {% endfor %}
-  <nav id="pagination">
-    <ul>
-      <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous page</a>{% else %}Previous page{% endif %}</li>
-      <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next page</a>{% else %}Next page{% endif %}</li>
-    <ul>
-  </nav>
+    {% endfor %}
 </div>
 
 
