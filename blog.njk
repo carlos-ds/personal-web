@@ -4,7 +4,7 @@ title: Karel De Smet - Blog
 slug: "/blog/"
 ---
 <div id="blog-overview">
-    {% for article in collections.article %}
+    {% for article in collections.article | reverse %}
     <article>
         <div class="article-title">
             <a href="{{ article.url | url }}">{{ article.data.title }}</a>
