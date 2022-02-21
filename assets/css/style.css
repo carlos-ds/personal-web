@@ -93,6 +93,13 @@ a:hover {
   cursor: pointer;
 }
 
+kbd {
+  background-color: #cccccc;
+  font-size: 1.25rem;
+  border-radius: 4px;
+  padding: 0.25rem;
+}
+
 .small {
   font-size: 1.25rem;
 }
@@ -111,8 +118,6 @@ a:hover {
   border: 1px solid #ffe680;
   display: inline-block;
   cursor: pointer;
-  padding: 11px 50px;
-  text-decoration: none;
   padding: 11px 50px;
   text-decoration: none;
 }
@@ -230,6 +235,9 @@ section:nth-of-type(even) {
 }
 
 /* Blog Overview */
+#blog-overview {
+  padding-left: 2rem;
+}
 #blog-overview article {
   display: grid;
   grid-template-columns: 5fr 1fr;
@@ -335,6 +343,10 @@ article .article-date {
 
   #projects a.project {
     width: 100%;
+  }
+
+  #blog-overview {
+    padding: 0;
   }
 
   #blog-overview article {
