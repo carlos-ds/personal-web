@@ -16,7 +16,7 @@ After testing, I had a look at how it was implemented and was pleasantly surpris
 
 ## Navigator.onLine
 
-The [Navigator object](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events), which you can access in the browser via <code class="inline-code">window.navigator</code>, has an <code class="inline-code">onLine</code> property. This boolean is prone to false positives, but we weren't looking for perfect coverage on this one.
+The [Navigator object](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events), which you can access in the browser via `window.navigator`, has an `onLine` property. This boolean is prone to false positives, but we weren't looking for perfect coverage on this one.
 
 Mind the capital 'L' though!
 
@@ -32,7 +32,7 @@ Mind the capital 'L' though!
 
 ## Online and offline events
 
-So we know how to check if a user is online or offline. But how can we **detect changes**? Writing custom events has never been anyone's favorite, but luckily the <code class="inline-code">online</code> and <code class="inline-code">offline</code> events are readily available.
+So we know how to check if a user is online or offline. But how can we **detect changes**? Writing custom events has never been anyone's favorite, but luckily the `online` and `offline` events are readily available.
 
 Want to try it out? Copy and paste the following code into an HTML file and open it in the browser. Then play with your network connection (in your OS or your browser's DevTools) to see it in action.
 
@@ -72,7 +72,7 @@ Want to try it out? Copy and paste the following code into an HTML file and open
 
 ## NetworkInformation
 
-Although out of scope for our use case, it was interesting to discover <code class="inline-code">window.navigation.connection</code> contained more network goodies, in the form of a [NetworkInformation instance](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation).
+Although out of scope for our use case, it was interesting to discover `window.navigation.connection` contained more network goodies, in the form of a [NetworkInformation instance](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation).
 
 In my case, it contained the following:
 

@@ -30,7 +30,7 @@ Upon every push to the development branch.
 
 ## How to get started?
 
-The process is relatively easy. In [our project](https://github.com/carlos-ds/iban), we create a new folder <code class="inline-code">.github/workflows</code>. Inside of this new folder, create a new YAML file (e.g. test.yml).
+The process is relatively easy. In [our project](https://github.com/carlos-ds/iban), we create a new folder `.github/workflows`. Inside of this new folder, create a new YAML file (e.g. test.yml).
 
 The full content for my project looks like this:
 
@@ -95,7 +95,7 @@ on:
 </code>
 </pre>
 
-The workflow is triggered upon every push to the branch named <code class="inline-code">develop</code>.
+The workflow is triggered upon every push to the branch named `develop`.
 
 <pre style="margin-top: 3rem; padding: 0 1rem; color: #ccc; background: #2d2d2d; border: 1px solid black; font-size: 1.2rem;">
 <code>
@@ -105,7 +105,7 @@ jobs:
 </code>
 </pre>
 
-A workflow consists of one or multiple jobs. Each job has a name and consists of one or multiple steps. With <code class="inline-code">runs-on</code>, we can specify the type of machine for each job. Our job will run on the latest version of Ubuntu (20.04).
+A workflow consists of one or multiple jobs. Each job has a name and consists of one or multiple steps. With `runs-on`, we can specify the type of machine for each job. Our job will run on the latest version of Ubuntu (20.04).
 
 <pre style="margin-top: 3rem; padding: 0 1rem; color: #ccc; background: #2d2d2d; border: 1px solid black; font-size: 1.2rem;">
 <code>
@@ -132,9 +132,9 @@ A workflow consists of one or multiple jobs. Each job has a name and consists of
 
 The [checkout (v2) action](https://github.com/actions/checkout) is likely among the most wielded custom actions. Since we are triggering this workflow by pushing to a certain branch (develop), this action will automatically checkout that branch. We don't have to explicitly mention it in the options.
 
-Next, we're doing a clean install of our dependencies with <code class="inline-code">npm ci</code>. This approach is preferred over <code class="inline-code">npm install</code>, because it ensures all our dependencies have the same version as the ones specified in the <code class="inline-code">package-lock.json</code> file of our development branch.
+Next, we're doing a clean install of our dependencies with `npm ci`. This approach is preferred over `npm install`, because it ensures all our dependencies have the same version as the ones specified in the `package-lock.json` file of our development branch.
 
-Then, our **test suites** are run with Jest by calling <code class="inline-code">npm test</code>.
+Then, our **test suites** are run with Jest by calling `npm test`.
 
 There are two options:
 

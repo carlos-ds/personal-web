@@ -71,9 +71,9 @@ If you're a happy front-end dude, you'll probably want to look into the Javascri
 
 Again, fairly easy to get started:
 
-* Use <code class="inline-code">navigator.mediaDevices.getUserMedia</code> to capture the user's video stream
-* Set the captured stream as the source for a <code class="inline-code">&lt;video&gt;</code> element.
-* Provide the stream to ZXing by passing the video element to <code class="inline-code">decodeFromVideoElement</code>
+* Use `navigator.mediaDevices.getUserMedia` to capture the user's video stream
+* Set the captured stream as the source for a `&lt;video&gt;` element.
+* Provide the stream to ZXing by passing the video element to `decodeFromVideoElement`
 
 I've made a [demo app](https://xenodochial-albattani-2da354.netlify.app/) for which you can find the code on [Github](https://github.com/carlos-ds/scanner-zxing-js-browser).
 

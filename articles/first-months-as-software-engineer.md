@@ -15,9 +15,9 @@ Let me share 3 insights from those first 2 months:
 
 ## Javascript: null - null === 0
 
-Why is this statement true? Because values are **implicitly coerced** to numbers when you perform mathematical operations on them. And <code class="inline-code">null</code> coerced to a number equals <code class="inline-code">0</code>.
+Why is this statement true? Because values are **implicitly coerced** to numbers when you perform mathematical operations on them. And `null` coerced to a number equals `0`.
 
-This actuallly caused a nice little bug in production. I didn't think through on <code class="inline-code">a - b</code> when both can be *null* and figured the result would be *null* as well. 
+This actuallly caused a nice little bug in production. I didn't think through on `a - b` when both can be *null* and figured the result would be *null* as well. 
 
 After fixing it, I called my best friend in these situations: Unit Test. Make sure you keep him close.
 

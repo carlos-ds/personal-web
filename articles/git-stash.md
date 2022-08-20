@@ -10,7 +10,7 @@ containsCodeSnippet: true
 
 # {{ title }}
 
-Just had to get this off my chest: I &#10084;&#65039; <code class="inline-code">git stash</code>! A couple of minutes ago, I launched Visual Studio Code, started typing away and saved my changes. Only to realize that I hadn't pulled the latest changes yet.
+Just had to get this off my chest: I &#10084;&#65039; `git stash`! A couple of minutes ago, I launched Visual Studio Code, started typing away and saved my changes. Only to realize that I hadn't pulled the latest changes yet.
 
 In this case, we need a place to **stash** our changes, revert the working tree to the latest commit and pull the latest changes. Then we can re-apply the stashed changes and continue as we always would.
 
@@ -23,9 +23,9 @@ The stash command makes this process as clean as a whistle:
   </code>
 </pre>
 
-This saves the unstaged changes that I've made to a new <code class="inline-code">stash entry</code>. And then reverts the branch that we're on (<code class="inline-code">develop</code>) to its latest commit.
+This saves the unstaged changes that I've made to a new `stash entry`. And then reverts the branch that we're on (`develop`) to its latest commit.
 
-We can now safely perform <code class="inline-code">git pull</code>, which updates our working tree with the latest upstream changes. To re-apply the stashed changes, we just have to execute one more command:
+We can now safely perform `git pull`, which updates our working tree with the latest upstream changes. To re-apply the stashed changes, we just have to execute one more command:
 
 <pre>
   <code class="language-git">

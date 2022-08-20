@@ -16,11 +16,11 @@ When I started working with MongoDB, I decided to keep helpful queries in a note
 
 Almost daily, I find myself manipulating data on one of our test environments. However, in our set-up, we can only write to the **primary instance** in our **replica set**.
 
-That's where <code class="inline-code">db.isMaster()</code> comes into play. The returned document contains the address of the primary member of the replica set. Then I connect to that member and work my magic, all error-free!
+That's where `db.isMaster()` comes into play. The returned document contains the address of the primary member of the replica set. Then I connect to that member and work my magic, all error-free!
 
 ## Getting all keys from a collection
 
-While <code class="inline-code">distinct</code> gets the distinct values for a specific key, there is no standardized way of getting all the keys that exist within a collection. As usual, [Stackoverflow](https://stackoverflow.com/questions/2298870/get-names-of-all-keys-in-the-collection) had the answer:
+While `distinct` gets the distinct values for a specific key, there is no standardized way of getting all the keys that exist within a collection. As usual, [Stackoverflow](https://stackoverflow.com/questions/2298870/get-names-of-all-keys-in-the-collection) had the answer:
 
 <pre>
 <code class="language-javascript">
@@ -58,7 +58,7 @@ Assume we want to get all the keys from the following data set:
 </code>
 </pre>
 
-In step 1, the <code class="inline-code">objectToArray</code> method is used to create an array of documents (1 for each original document). Every document in this new array has an <code class="inline-code">id</code> and <code class="inline-code">arrayofkeyvalue</code>, which contains two keys (<code class="inline-code">k</code> and <code class="inline-code">v</code>) per key-value pair in the original data.
+In step 1, the `objectToArray` method is used to create an array of documents (1 for each original document). Every document in this new array has an `id` and `arrayofkeyvalue`, which contains two keys (`k` and `v`) per key-value pair in the original data.
 
 **Query (step 1):**
 
@@ -136,7 +136,7 @@ db.collection.aggregate([
 </code>
 </pre>
 
-In the next step, the output of step 1 is flattened with <code class="inline-code">unwind</code> into an array of documents that has the size of the amount of existing keys.
+In the next step, the output of step 1 is flattened with `unwind` into an array of documents that has the size of the amount of existing keys.
 
 **Query (step 2):**
 
@@ -229,7 +229,7 @@ db.collection.aggregate([
 </code>
 </pre>
 
-See how we're getting there? In the last step, we're adding all the <code class="inline-code">k</code> values (meaning: the keys from the original data) to a set using <code class="inline-code">addToSet</code>.
+See how we're getting there? In the last step, we're adding all the `k` values (meaning: the keys from the original data) to a set using `addToSet`.
 
 If you're not familiar with a set, just think of it (for our use case) as a deduplicated array.
 
@@ -268,7 +268,7 @@ Easy, right?
 
 ## Querying dates
 
-At the start of working with MongoDB, one of the hardest things was querying for dates. Not just because I wasn't yet accustomed to the date format, but I also found myself confused between <code class="inline-code">lt</code> (less than, which I seemed to often confuse for "larger than") and <code class="inline-code">gt</code> (greater than).
+At the start of working with MongoDB, one of the hardest things was querying for dates. Not just because I wasn't yet accustomed to the date format, but I also found myself confused between `lt` (less than, which I seemed to often confuse for "larger than") and `gt` (greater than).
 
 That's why this simple example will live forever in my notebook:
 

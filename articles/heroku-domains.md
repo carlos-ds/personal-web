@@ -52,7 +52,7 @@ heroku update
 </code>
 </pre>
 
-Then run the <code class="inline-code">domains:add</code>command again and add the app name as a flag.
+Then run the `domains:add` command again and add the app name as a flag.
 
 <pre class="language-javascript">
 <code class="language-javascript">
