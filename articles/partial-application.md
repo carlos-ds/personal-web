@@ -3,8 +3,8 @@ layout: layouts/article-layout.njk
 title: "Partial application"
 date: 2023-12-30
 tags: ['article']
-preview: "Provide users with a better users experience by asynchronously validating their form input."
-description: "Provide users with a better users experience by asynchronously validating their form input."
+preview: "About fixing arguments to a function"
+description: "What is partial application and how to use it, either with Function.prototype.bind() or with Ramda.js"
 containsCodeSnippet: true
 ---
 
