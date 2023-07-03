@@ -2,8 +2,5 @@ _site/
 node_modules/
 new-layout.html
 notes/
-articles/debugging-sse.md
-articles/interview-assignment.md
-articles/local-angular-with-ssl.md
-articles/mvp-with-playwright.md
+articles/draft/
 .idea/

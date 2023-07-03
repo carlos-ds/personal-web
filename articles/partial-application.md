@@ -1,7 +1,7 @@
 ---
 layout: layouts/article-layout.njk
 title: "Partial application"
-date: 2023-12-30
+date: 2022-12-30
 tags: ['article']
 preview: "About fixing arguments to a function"
 description: "What is partial application and how to use it, either with Function.prototype.bind() or with Ramda.js"
