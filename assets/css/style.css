@@ -122,6 +122,10 @@ kbd {
   text-decoration: none;
 }
 
+pre[class*=language-] {
+  font-size: 1.2rem;
+}
+
 :not(pre) code {
   padding: 0 0.25rem;
   font-size: 1.4rem;
