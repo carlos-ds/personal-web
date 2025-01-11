@@ -13,9 +13,9 @@ description: "Learn how to create an app to scan QR/bar codes with a laptop's we
 
 I've built 3 demo apps, each of which can scan (nearly) any type of QR code or barcode, with a mobile device's camera or the webcam from a desktop or laptop. They all make use of a different API or library. 
 
-1. Barcode Detection API: [demo app](https://jovial-torvalds-a5c7a4.netlify.app/) / [Github repo](https://github.com/carlos-ds/scanner-barcode-detection-api)
-2. ZXing for JS: [demo app](https://xenodochial-albattani-2da354.netlify.app/) / [Github repo](https://github.com/carlos-ds/scanner-zxing-js-browser)
-3. NGX scanner (Angular port from ZXing): [demo app](https://gifted-wing-6c45fe.netlify.app/) / [Github repo](https://github.com/carlos-ds/zxing-js-ngx-scanner)
+1. Barcode Detection API: [demo app](https://heroic-pixie-920d9f.netlify.app/) / [Github repo](https://github.com/carlos-ds/scanner-barcode-detection-api)
+2. ZXing for JS: [demo app](https://thriving-daifuku-76efc9.netlify.app/) / [Github repo](https://github.com/carlos-ds/scanner-zxing-js-browser)
+3. NGX scanner (Angular port from ZXing): [demo app](https://moonlit-cassata-785f18.netlify.app/) / [Github repo](https://github.com/carlos-ds/zxing-js-ngx-scanner)
 
 ## The bigger picture
 
@@ -43,7 +43,7 @@ Believe it or not, there is a **Web API** that allows you to scan a multitude of
 
 Well, it is relatively **easy to use**! Duck soup, cakewalk, child's play ... you get it. 
 
-I've strung together an unstyled [demo app](https://jovial-torvalds-a5c7a4.netlify.app/). Check out the [Github repo](https://github.com/carlos-ds/scanner-barcode-detection-api) for the source code.
+I've strung together an unstyled [demo app](https://heroic-pixie-920d9f.netlify.app/). Check out the [Github repo](https://github.com/carlos-ds/scanner-barcode-detection-api) for the source code.
 
 Upon loading the demo page, you should be prompted for access to your video device. Once allowed, a video stream of your device should be playing. 
 
@@ -75,7 +75,7 @@ Again, fairly easy to get started:
 * Set the captured stream as the source for a `&lt;video&gt;` element.
 * Provide the stream to ZXing by passing the video element to `decodeFromVideoElement`
 
-I've made a [demo app](https://xenodochial-albattani-2da354.netlify.app/) for which you can find the code on [Github](https://github.com/carlos-ds/scanner-zxing-js-browser).
+I've made a [demo app](https://thriving-daifuku-76efc9.netlify.app/) for which you can find the code on [Github](https://github.com/carlos-ds/scanner-zxing-js-browser).
 
 As you can see, we don't need to manually take images from our video stream every x amount of time as with the Barcode Detection API. ZXing is doing that work for us. 
 
@@ -83,7 +83,7 @@ ZXing also supports a [couple of extra formats](https://github.com/zxing-js/libr
 
 For **Angular** developers, there's even better news called [ngx-scanner](https://github.com/zxing-js/ngx-scanner). This lets you **import ZXing as a component** into your Angular project. The [Wiki](https://github.com/zxing-js/ngx-scanner/wiki/Getting-Started) should be just enough to get you up and running.
 
-Again, here's an unstyled [demo app](https://gifted-wing-6c45fe.netlify.app/) and the accompanying [Github repo](https://github.com/carlos-ds/zxing-js-ngx-scanner). 
+Again, here's an unstyled [demo app](https://moonlit-cassata-785f18.netlify.app/) and the accompanying [Github repo](https://github.com/carlos-ds/zxing-js-ngx-scanner). 
 
 ### The not so good news
 
