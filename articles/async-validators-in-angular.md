@@ -72,7 +72,7 @@ Moreover, you can see that we have also mapped the API response to an observable
 </code>
 </pre>
 
-As you can see, the possible values in this object are not limited to boolean values. You could pass any other value and utilize it inside the component or template (e.g. showing in the error message how many items with a similar title already exist).
+The possible values for this object are not limited to boolean values. You could pass any other value and utilize it inside the component or template (e.g. showing in the error message how many items with a similar title already exist).
 
 ## Register our validator with the form control
 
@@ -86,14 +86,14 @@ const recipeForm = new FormGroup({
 </code>
 </pre>
 
-As you can see, our asynchronous validator is the third argument in the constructor. The second argument is reserved for synchronous validators.
+Our asynchronous validator is the third argument in the constructor. The second argument is reserved for synchronous validators.
 
 A second option is to use `FormBuilder`.
 
 <pre>
 <code class="language-javascript">
 const recipeForm = this.formBuilder.group({
-  title: [null, Validators.required, recipeTitleAsyncValidator(this.recipeService))
+  title: [null, Validators.required, recipeTitleAsyncValidator(this.recipeService)]
 });
 </code>
 </pre>
@@ -124,7 +124,7 @@ Note that we could refactor the example above using a ternary operator during th
 <pre>
 <code class="language-javascript">
 const recipeForm = this.formBuilder.group({
-  title: [null, Validators.required, isAdmin ? null : recipeTitleAsyncValidator(this.recipeService))
+  title: [null, Validators.required, isAdmin ? null : recipeTitleAsyncValidator(this.recipeService)]
 });
 </code>
 </pre>
@@ -228,9 +228,7 @@ describe('recipeTitleAsyncValidator', () => {
   beforeEach(
     waitForAsync(() =&gt; {
       TestBed.configureTestingModule({
-        imports: [],
         providers: [{provide: RECIPES, useClass: RecipeService}],
-        declarations: []
       });
     })
   );
