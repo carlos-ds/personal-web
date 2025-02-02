@@ -35,7 +35,7 @@ li,
 ul,
 a {
   color: var(--text-color);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 li {
@@ -57,20 +57,19 @@ h1 {
 }
 
 h2 {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
   text-transform: uppercase;
   font-size: 2.3rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.1rem;
   margin: 1rem 0;
 }
 
 h4 {
-  font-size: 2rem;
-  text-transform: uppercase;
-}
+  font-size: 1.8rem;
+  }
 
 a {
   color: var(--text-color);
@@ -128,7 +127,7 @@ pre[class*=language-] {
 
 :not(pre) code {
   padding: 0 0.25rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: monospace;
   background: #ddd;
 }
