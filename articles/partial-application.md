@@ -87,13 +87,20 @@ The answer is:
 
 <pre>
 <code class="language-javascript">
-sumThree();    // NaN
+sumThree();     // NaN
 </code>
 </pre>
 
 Why is that? Because `this.a` equals `undefined` when `this` is bound to `randomObject`, the expression to be evaluated is `undefined + 3`.
 
-If you re-read the _type coercion_ rules, for example in [You Don't Know JS Yet: Types & Grammar](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/types-grammar/ch4.md), you will see that in expressions with mathematical operators (such as `+`), both operands are coerced to a number.
+If you re-read the _type coercion_ rules, for example in [You Don't Know JS Yet: Types & Grammar](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/types-grammar/ch4.md), you will see that in expressions with mathematical operators (such as `+`), both operands are coerced to a number. There's an important exception though: if one of the operands is a string and the operator is `+`, the second operand will be coerced into a string.
+
+<pre>
+<code class="language-javascript">
+'10' + 1     // '101'
+</code>
+</pre>
+
 
 That means, the expression to be evaluated after the type coercion is `Number(undefined) + 3`. And `Number(undefined)` equals `NaN`, which leaves `NaN + 3` and that also evaluates to `NaN`.
 
