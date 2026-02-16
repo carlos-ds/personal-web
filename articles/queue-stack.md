@@ -1,10 +1,10 @@
 ---
 layout: layouts/article-layout.njk
-title: 'Implementing and testing a queue and stack in JavaScript'
+title: "Implementing and testing a queue and stack in JavaScript"
 date: 2025-11-04
-tags: ['article', 'featured']
-preview: 'Two basic data structures, done right with JavaScript.'
-description: 'A queue and a stack: get these basic data structures right in JavaScript'
+tags: ["article", "featured"]
+preview: "Two basic data structures, done right with JavaScript."
+description: "A queue and a stack: get these basic data structures right in JavaScript"
 containsCodeSnippet: true
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: layouts/article-layout.njk
-title: 'Develop a QR/barcode scanner'
+title: "Develop a QR/barcode scanner"
 date: 2021-05-24
-tags: ['article']
-preview: 'Should you use ZXing or the Barcode Detection API?'
+tags: ["article"]
+preview: "Should you use ZXing or the Barcode Detection API?"
 description: "Learn how to create an app to scan QR/bar codes with a laptop's webcam or smartphone's camera"
 ---
 

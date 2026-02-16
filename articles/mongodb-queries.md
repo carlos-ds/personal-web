@@ -1,10 +1,10 @@
 ---
 layout: layouts/article-layout.njk
-title: 'Helpful MongoDB queries'
+title: "Helpful MongoDB queries"
 date: 2021-03-21
-tags: ['article']
-preview: 'Keeping these close can come in handy.'
-description: 'An overview of simple yet extremely handy MongoDB queries I keep in my notebook'
+tags: ["article"]
+preview: "Keeping these close can come in handy."
+description: "An overview of simple yet extremely handy MongoDB queries I keep in my notebook"
 containsCodeSnippet: true
 ---
 

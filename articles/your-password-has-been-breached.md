@@ -2,7 +2,7 @@
 layout: layouts/article-layout.njk
 title: "Your password has been breached!"
 date: 2023-06-10
-tags: ['article']
+tags: ["article"]
 preview: "A detailed look into Haveibeenpwned"
 description: "A deep dive into how persons and organisations can use Haveibeenpwned to stay informed about leaked passwords."
 ---

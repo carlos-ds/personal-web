@@ -1,10 +1,10 @@
 ---
 layout: layouts/article-layout.njk
-title: 'How I optimize my productivity'
+title: "How I optimize my productivity"
 date: 2022-02-19
-tags: ['article']
-preview: 'Tools for staying productive paired with good habits.'
-description: 'My tips and tools for staying productive as a developer.'
+tags: ["article"]
+preview: "Tools for staying productive paired with good habits."
+description: "My tips and tools for staying productive as a developer."
 ---
 
 # {{ title }}

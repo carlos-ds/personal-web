@@ -1,10 +1,10 @@
 ---
 layout: layouts/article-layout.njk
-title: 'Testing filesize validations'
+title: "Testing filesize validations"
 date: 2025-02-01
-tags: ['article', 'featured']
-preview: 'About error 413, Retry-After and mkfile'
-description: 'Read about HTTP status code 413,the  Retry-After response header and learn to create an empty file of any size and type.'
+tags: ["article", "featured"]
+preview: "About error 413, Retry-After and mkfile"
+description: "Read about HTTP status code 413,the  Retry-After response header and learn to create an empty file of any size and type."
 containsCodeSnippet: true
 ---
 
