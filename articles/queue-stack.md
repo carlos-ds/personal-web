@@ -10,6 +10,10 @@ containsCodeSnippet: true
 
 # {{ title }}
 
+## TL;DR
+
+I dabbled into DSA and wanted to play around with the Node test runner. I combined that into some basic coding exercise and dumped it into a repo: [https://github.com/carlos-ds/queue-stack](https://github.com/carlos-ds/queue-stack). At the end of this article, you'll also find some useful resources for learning DSA in JavaScript.
+
 ## Stack
 
 The stack of plates at a cafeteria is the number one analogy for this data structure. You add (**push**) a new plate to the top, you don't shove it in somewhere in between. Neither will you be lifting up plates to get (**pop**) one out .
