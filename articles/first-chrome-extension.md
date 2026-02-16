@@ -2,7 +2,7 @@
 layout: layouts/article-layout.njk
 title: "How to develop a Chrome extension"
 date: 2020-09-09
-tags: ["article", "featured"]
+tags: ["article"]
 preview: "I wanted to fix a particularly common problem."
 description: "Step-by-step guide to developing a simple but effective Google Chrome extension that fixes a common problem."
 containsCodeSnippet: true
