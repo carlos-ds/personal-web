@@ -204,6 +204,10 @@ a.button:hover {
   height: 0;
 }
 
+.height--auto {
+  height: auto;
+}
+
 .extra-bold {
   font-weight: 900;
 }

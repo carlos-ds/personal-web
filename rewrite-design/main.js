@@ -1,8 +1,22 @@
+let isNavigationClosed = true;
+
 document.addEventListener("DOMContentLoaded", () => {
   const hamburgerIcon = document.getElementById("hamburger-icon");
+
   hamburgerIcon.addEventListener("click", () => {
     const navItems = document.querySelector(".nav-items");
-    navItems.style.opacity = 1;
-    navItems.style.height = "auto";
+
+    if (isNavigationClosed) {
+      navItems.classList.add("opaque");
+      navItems.classList.add("height--auto");
+    } else {
+      navItems.classList.remove("opaque");
+      navItems.classList.remove("height--auto");
+    }
+
+    const icon = document.querySelector(".material-symbols-outlined");
+    icon.textContent = isNavigationClosed ? "close" : "menu";
+
+    isNavigationClosed = !isNavigationClosed;
   });
 });
