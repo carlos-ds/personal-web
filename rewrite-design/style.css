@@ -98,6 +98,43 @@ main {
 
   & a.button {
     display: block;
+    font-size: 24px;
+    line-height: 1;
+
+    & .material-symbols-outlined {
+      vertical-align: bottom;
+    }
+  }
+}
+
+#about {
+  & h2 {
+    background-color: var(--secondary-color);
+    color: white;
+    margin-bottom: 0.5rem;
+    padding-left: var(--horizontal-spacing-md);
+  }
+
+  & section {
+    margin-bottom: 2rem;
+
+    & p {
+      padding: 0 var(--horizontal-spacing-md);
+    }
+
+    & ul {
+      padding-right: var(--horizontal-spacing-md);
+    }
+  }
+}
+
+#home {
+  & section {
+    padding: var(--vertical-spacing-md) var(--horizontal-spacing-md);
+  }
+
+  & section:nth-of-type(2n) {
+    background-color: var(--tertiary-color);
   }
 }
 
@@ -115,14 +152,6 @@ a.post {
 
 a.post:last-of-type {
   border: none;
-}
-
-section {
-  padding: var(--vertical-spacing-md) var(--horizontal-spacing-md);
-}
-
-section:nth-of-type(2n) {
-  background-color: var(--tertiary-color);
 }
 
 /* Button styles */
@@ -144,8 +173,8 @@ a.button:hover {
 /* Media queries */
 @media screen and (width > 768px) {
   main {
-    padding: 0 var(--vertical-spacing-sm) var(--vertical-spacing-lg)
-      var(--vertical-spacing-sm);
+    padding: 0 var(--horizontal-spacing-md) var(--vertical-spacing-lg)
+      var(--horizontal-spacing-md);
   }
 
   #intro {

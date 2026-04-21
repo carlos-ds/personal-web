@@ -17,14 +17,41 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	{% if (containsCodeSnippet === true) %}
         <script defer src="/assets/js/prism.js"></script>
-    {% endif %}
-	{% if (containsCodeSnippet === true) %}
 		<link rel="stylesheet" href="/assets/css/prism-1.29.0.css" type="text/css" />
-	{% endif %}
+    {% endif %}
+	<link rel="stylesheet" href="/assets/css/reset.css" type="text/css" />
 	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Icon names should be sorted alphabetically in the href below, see https://github.com/google/material-design-icons/issues/1834 -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu,waving_hand" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
 	<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/assets/img/favicon/site.webmanifest">
 </head>
 <body>
+	<header class="extra-bold text-secondary letter-spacing-md">
+        <div>
+            <a href="/">Karel De Smet</a>
+        </div>
+        <div id="mobile-nav">
+            <div id="hamburger-icon">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-items">
+                <ul>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./uses.html">Uses</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>

@@ -1,9 +1,9 @@
 ---
 layout: layouts/article-layout.njk
-title: '3 things I learned in my first 2 months as a Software Engineer'
+title: "3 things I learned in my first 2 months as a Software Engineer"
 date: 2021-07-27
-tags: ['article']
-preview: 'A Javascript quirk, RxJS and the value of contracts.'
+tags: ["article"]
+preview: "A Javascript quirk, RxJS and the value of contracts."
 description: "Learn why null - null === 0 in Javascript, why RxJS is bliss and what the value of contracts is in programming."
 ---
 
