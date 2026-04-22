@@ -25,27 +25,14 @@ description: 'Software developer from Belgium. Loves to code, read and write.'
       </div>
   </section>
   <section id="blog-overview">
-      <h2 class="uppercase letter-spacing-md  ">Blog ✍️</h2>
+    <h2 class="uppercase letter-spacing-md  ">Featured blog posts</h2>
+    {%- for article in collections.featured | reverse -%}
       <a class="post" href="#">
-          <time>🗓️ April 1, 2025</time>
-          <div>
-              <h3>Lorem ipsum dolor sit amet</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          </div>
-      </a>
-      <a class="post" href="#">
-          <time>🗓️ April 1, 2025</time>
-          <div>
-              <h3>Lorem ipsum dolor sit amet</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          </div>
-      </a>
-      <a class="post" href="#">
-          <time>🗓️ April 1, 2025</time>
-          <div>
-              <h3>Lorem ipsum dolor sit amet</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          </div>
-      </a>
-  </section>
+        <time>{{ article.data.date | date }}</time>
+        <div>
+            <h3>{{ article.data.title }}</h3>
+            <p>{{ article.data.preview }}</p>
+        </div>
+    </a>
+    {%- endfor -%}
 </main>
