@@ -154,8 +154,7 @@ main {
 
   & a:not(.post):hover {
     opacity: 0.8;
-    text-decoration-thickness: 0.75rem;
-    text-underline-offset: 0.25rem;
+    text-underline-offset: 0.35rem;
     text-decoration-skip-ink: none;
   }
 }
