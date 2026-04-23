@@ -12,7 +12,7 @@ containsCodeSnippet: true
 
 ## TL;DR
 
-I dabbled into DSA and wanted to play around with the Node test runner. I combined that into some basic coding exercise and dumped it into a repo: [https://github.com/carlos-ds/queue-stack](https://github.com/carlos-ds/queue-stack). At the end of this article, you'll also find some useful resources for learning DSA in JavaScript.
+I dabbled into DSA and wanted to play around with the Node test runner. I combined that into some basic coding exercise and dumped it into a [Github repo](https://github.com/carlos-ds/queue-stack). At the end of this article, you'll also find some useful resources for learning DSA in JavaScript.
 
 ## Stack
 
