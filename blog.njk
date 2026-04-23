@@ -1,0 +1,20 @@
+---
+layout: layouts/base-layout.njk
+title: Karel De Smet - Blog
+slug: "/blog/"
+---
+<main id="blog-overview">
+    <section class="blog-posts-list">
+        {%- for article in collections.article | reverse -%}
+        <a class="post" href="{{ article.url | url }}">
+            <time>{{ article.data.date | date }}</time>
+            <div>
+                <h3>{{ article.data.title }}</h3>
+                <p>{{ article.data.preview }}</p>
+            </div>
+        </a>
+        {%- endfor -%}
+    </div>
+<main>
+
+
