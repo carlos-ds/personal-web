@@ -138,6 +138,28 @@ main {
   }
 }
 
+#blog-overview {
+  & a:not(.post) {
+    margin: 2rem 0; 
+    display: inline-block; 
+    text-decoration: underline; 
+    text-decoration-color: var(--secondary-color); 
+    text-decoration-thickness: .25rem; 
+    text-underline-offset: 0.125rem;
+    text-transform: uppercase;
+    font-family: var(--header-font);
+    font-size: 1.25rem;
+    transition: all 0.25s linear;
+  }
+
+  & a:not(.post):hover {
+    opacity: 0.8;
+    text-decoration-thickness: 0.75rem;
+    text-underline-offset: 0.25rem;
+    text-decoration-skip-ink: none;
+  }
+}
+
 a.post {
   display: grid;
   grid-template-rows: auto 1fr;

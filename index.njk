@@ -1,7 +1,7 @@
 ---
 layout: layouts/base-layout.njk
 title: Karel De Smet
-description: 'Software developer from Belgium. Loves to code, read and write.'
+description: "Software developer from Belgium. Loves to code, read and write."
 ---
 <main id="home">
   <section id="intro">
@@ -27,7 +27,7 @@ description: 'Software developer from Belgium. Loves to code, read and write.'
   <section id="blog-overview">
     <h2 class="uppercase letter-spacing-md  ">Featured blog posts</h2>
     {%- for article in collections.featured | reverse -%}
-      <a class="post" href="#">
+      <a class="post" href="{{ article.url | url }}">
         <time>{{ article.data.date | date }}</time>
         <div>
             <h3>{{ article.data.title }}</h3>
@@ -35,4 +35,6 @@ description: 'Software developer from Belgium. Loves to code, read and write.'
         </div>
     </a>
     {%- endfor -%}
+    <a href="/">→ View all blog posts</a>
+  </section>
 </main>

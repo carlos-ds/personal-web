@@ -2,7 +2,7 @@
 layout: layouts/article-layout.njk
 title: "Add some Typescript love to your Material dialogs"
 date: 2023-09-22
-tags: ['article']
+tags: ["article", "featured"]
 preview: "Get the maximum out of Material and Typescript by properly providing types and interfaces when opening Material dialogs."
 description: "Get the maximum out of Material and Typescript by properly providing types and interfaces when opening Material dialogs."
 containsCodeSnippet: true
