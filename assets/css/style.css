@@ -31,17 +31,6 @@ h6 {
   font-family: var(--header-font);
 }
 
-a {
-  text-decoration: underline;
-  color: var(--secondary-color);
-  transition: all 0.5s ease-out;
-}
-
-& a:hover {
-  opacity: 0.7;
-  text-decoration: none;
-}
-
 header {
   display: grid;
   grid-template-columns: max-content max-content;
@@ -167,11 +156,11 @@ main {
   }
 
   & a:not(.post) {
-    margin: 2rem 0; 
-    display: inline-block; 
-    text-decoration: underline; 
-    text-decoration-color: var(--secondary-color); 
-    text-decoration-thickness: .25rem; 
+    margin: 2rem 0;
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color);
+    text-decoration-thickness: 0.25rem;
     text-underline-offset: 0.125rem;
     text-transform: uppercase;
     font-family: var(--header-font);
@@ -194,7 +183,11 @@ main {
   padding: var(--vertical-spacing-md) var(--horizontal-spacing-md);
   font-size: 1.25rem;
 
-  & h2, h3, h4, h5, h6 {
+  & h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: var(--vertical-spacing-sm) 0 var(--vertical-spacing-xs) 0;
   }
 
@@ -206,6 +199,20 @@ main {
   & a.button {
     display: inline-block;
     margin: var(--vertical-spacing-md) 0;
+  }
+}
+
+#blog-post,
+#about {
+  & a {
+    text-decoration: underline;
+    color: var(--secondary-color);
+    transition: all 0.5s ease-out;
+  }
+
+  & a:hover {
+    opacity: 0.7;
+    text-decoration: none;
   }
 }
 
@@ -280,6 +287,10 @@ a.button:hover {
 }
 
 /* Utility classes */
+.margin-bottom-xs {
+  margin-bottom: var(--vertical-spacing-xs);
+}
+
 .opaque {
   opacity: 1;
 }
