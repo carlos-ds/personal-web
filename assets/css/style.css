@@ -63,11 +63,24 @@ nav {
   opacity: 0;
   position: relative;
   transition: opacity 0.25s ease-out;
+  font-size: 1.25rem;
 
   & ul {
     list-style-type: none;
     padding: 0;
+
+    & li {
+      margin-bottom: 0.5rem;
+    }
+
+    & li:first-of-type {
+      margin-top: 0.5rem;
+    }
   }
+}
+
+#logo {
+  font-size: 1.25rem;
 }
 
 main {
@@ -107,7 +120,8 @@ main {
   }
 }
 
-#about {
+#about,
+#uses {
   & h2 {
     background-color: var(--secondary-color);
     color: white;
@@ -116,7 +130,7 @@ main {
   }
 
   & section {
-    margin-bottom: 2rem;
+    margin-bottom: var(--vertical-spacing-md);
 
     & p {
       padding: 0 var(--horizontal-spacing-md);
@@ -124,6 +138,19 @@ main {
 
     & ul {
       padding-right: var(--horizontal-spacing-md);
+    }
+  }
+}
+
+#uses {
+  & section:first-of-type {
+    margin-top: 2rem;
+  }
+
+  & #home-office {
+    & img {
+      display: block;
+      width: 100%;
     }
   }
 }
@@ -284,11 +311,23 @@ a.button:hover {
       }
     }
   }
+
+  #uses {
+    & #home-office {
+      & img {
+        border-radius: 2rem;
+      }
+    }
+  }
 }
 
 /* Utility classes */
 .margin-bottom-xs {
   margin-bottom: var(--vertical-spacing-xs);
+}
+
+.margin-bottom-md {
+  margin-bottom: var(--vertical-spacing-md);
 }
 
 .opaque {
