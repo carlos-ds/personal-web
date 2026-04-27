@@ -7,6 +7,8 @@
   --secondary-color: #2358d1;
   --secondary-box-shadow: rgba(0, 0, 255, 0.2);
   --tertiary-color: #ffe680;
+  --code-background-color: #2d2d2d;
+  --color-white: #ffffff;
   --vertical-spacing-lg: 4rem;
   --vertical-spacing-md: 2rem;
   --vertical-spacing-sm: 1rem;
@@ -124,7 +126,7 @@ main {
 #uses {
   & h2 {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--color-white);
     margin-bottom: 0.5rem;
     padding-left: var(--horizontal-spacing-md);
   }
@@ -210,6 +212,10 @@ main {
   padding: var(--vertical-spacing-md) var(--horizontal-spacing-md);
   font-size: 1.25rem;
 
+  & h1 {
+    margin-bottom: var(--vertical-spacing-sm);
+  }
+
   & h2,
   h3,
   h4,
@@ -218,9 +224,25 @@ main {
     margin: var(--vertical-spacing-sm) 0 var(--vertical-spacing-xs) 0;
   }
 
+  & p {
+    margin-bottom: var(--vertical-spacing-sm);
+  }
+
+  & code {
+    font-size: inherit;
+    background-color: var(--adjacent-text-color);
+    font-size: 1rem;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+  }
+
   & pre {
     margin: var(--vertical-spacing-sm) 0;
     font-size: 1rem;
+
+    & code {
+      background-color: var(--code-background-color);
+    }
   }
 
   & a.button {
@@ -237,6 +259,14 @@ main {
     transition: all 0.5s ease-out;
   }
 
+  & a.button {
+    text-decoration: none;
+  }
+
+  & a.button:hover {
+    color: var(--color-white);
+  }
+
   & a:hover {
     opacity: 0.7;
     text-decoration: none;
@@ -247,7 +277,7 @@ main {
 a.button {
   padding: var(--vertical-spacing-sm) var(--horizontal-spacing-sm);
   color: var(--secondary-color);
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 0.5rem;
   border: 2px solid var(--secondary-color);
   font-weight: 700;
@@ -255,7 +285,7 @@ a.button {
 
 a.button:hover {
   background-color: var(--secondary-color);
-  color: white;
+  color: var(--color-white);
   transition: all 0.25s ease-in;
 }
 
