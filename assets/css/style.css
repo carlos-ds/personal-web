@@ -10,6 +10,10 @@
   --code-background-color: #2d2d2d;
   --color-white: #ffffff;
   --color-black: #000000;
+  --border-radius-lg: 2rem;
+  --border-radius-md: calc(var(--border-radius-lg) * 0.5);
+  --border-radius-sm: calc(var(--border-radius-md) * 0.5);
+  --border-radius-xs: calc(var(--border-radius-sm) * 0.5);
   --vertical-spacing-lg: 4rem;
   --vertical-spacing-md: calc(var(--vertical-spacing-lg) * 0.5);
   --vertical-spacing-sm: calc(var(--vertical-spacing-md) * 0.5);
@@ -104,7 +108,7 @@ main {
     border: 1px solid var(--color-black);
     box-shadow: var(--vertical-spacing-xxs) var(--vertical-spacing-xxs)
       var(--vertical-spacing-xxs) var(--adjacent-text-color);
-    width: 80%;
+    width: 50%;
   }
 
   & h2 {
@@ -236,8 +240,8 @@ main {
     font-family: var(--code-font);
     background-color: var(--adjacent-text-color);
     font-size: 1rem;
-    padding: 0.2rem;
-    border-radius: 0.2rem;
+    padding: var(--border-radius-xs);
+    border-radius: var(--border-radius-xs);
   }
 
   & pre {
@@ -282,7 +286,7 @@ a.button {
   padding: var(--vertical-spacing-sm) var(--horizontal-spacing-sm);
   color: var(--secondary-color);
   background-color: var(--color-white);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-sm);
   border: 2px solid var(--secondary-color);
   font-weight: 700;
 }
@@ -306,6 +310,7 @@ a.button:hover {
     row-gap: 0;
 
     & img {
+      width: 100%;
       max-width: 250px;
     }
 
@@ -321,7 +326,7 @@ a.button:hover {
   }
 
   .blog-posts-list {
-    border-radius: 1rem;
+    border-radius: var(--border-radius-md);
   }
 
   #mobile-nav {
@@ -349,7 +354,7 @@ a.button:hover {
   #uses {
     & #home-office {
       & img {
-        border-radius: 2rem;
+        border-radius: var(--border-radius-lg);
       }
     }
   }
